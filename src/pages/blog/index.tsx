@@ -59,6 +59,12 @@ const menuTree = [
     path: 'localstorage-usage',
     mdx: Mdx.LocalstorageUsage,
   },
+  {
+    id: 'i-app-hooks',
+    text: 'IAppHooks Kullanımı',
+    path: 'i-app-hooks',
+    mdx: Mdx.IAppHooks,
+  },
 ]
 
 

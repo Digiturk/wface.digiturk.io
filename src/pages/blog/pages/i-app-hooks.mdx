@@ -1,0 +1,50 @@
+import { WDivider, WIcon } from '@wface/components'
+import CodeView from '../../../components/code-view'
+
+# IAppHooks Kullanımı
+
+Uygulamanızın hayat döngüsüne müdahelede bulunabilmek için IAppHooks özelliğini kullanabilirsiniz. 
+IAppHooks ile uygulamanın render olduğu anda veya uygulama kapatılırken bazı kod parçalarını çalıştırabilirsiniz. 
+
+Aşağıdaki IAppHooks örneğinde sayfadan kullanıcı onayına sunulmuş:
+
+<CodeView 
+code={
+`import IAppHooks from '@wface/ioc/src/interfaces/i-app-hooks';
+import { injectable } from "inversify";
+\n
+const onUnload = (event) => {
+  event.returnValue = "Hellooww";
+}
+\n
+@injectable()
+export default class AppHooks implements IAppHooks {
+  onAppMount() {
+    console.log('App mounted');
+    window.addEventListener("beforeunload", onUnload);
+  }  
+}`}/>
+
+<br/>
+
+> Hooks sınıfınızın çalışması için configurasyona gerekli tanımlamayı yapmanız gerekir.
+
+<CodeView 
+code={
+`import { IConfiguration, IHttpService } from "@wface/ioc";
+import AuthService from '../../src/services/AuthService';
+import AppHooks from '../../src/services/app-hooks'; // Burda import yapılıyor
+import { DemoScreen } from '../../src/screens/DemoScreen'; 
+import { WTheme } from '@wface/components';
+\n
+const config = {
+  projectName: 'WFace',  
+  screenList: { 
+    DemoScreen 
+  },
+  authService: new AuthService(),  
+  theme: theme,
+  hooks: AppHooks // AppHooks burada configurasyona veriliyor
+} as IConfiguration
+\n
+export default config;`}/>
