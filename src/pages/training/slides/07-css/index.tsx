@@ -34,7 +34,7 @@ export class CssSlide extends React.Component<CssSlideProps, any> {
             <div style={{ display: 'table', height: '100%', width: '100%' }}>
               <div style={{ display: 'table-cell', verticalAlign: 'middle', textAlign: 'center' }}>
                 <div style={{ backgroundColor: '#FFFFFFAA', borderRadius: 10, padding: 10, width: 'fit-content', margin: 'auto' }}>
-                  <img src="./assets/slide/css-syntax.png" />
+                  <img src="/assets/slide/css-syntax.png" />
                 </div>
               </div>
             </div>

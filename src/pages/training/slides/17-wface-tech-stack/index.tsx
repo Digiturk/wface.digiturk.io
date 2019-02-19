@@ -32,21 +32,21 @@ export class WFaceTechStack extends React.Component<WFaceTechStackProps, any> {
               <div style={{ display: 'table-cell', verticalAlign: 'middle', textAlign: 'center' }}>
                 <div style={{ width: 'fit-content', margin: 'auto' }}>
                     <WGrid container style={{ height: '40%' }}>
-                      <WGrid item xs={6} style={style}><img style={imgStyle} src="./assets/slide/react.png" /></WGrid>
-                      <WGrid item xs={6} style={style}><img style={imgStyle} src="./assets/slide/typescript.png" /></WGrid>
+                      <WGrid item xs={6} style={style}><img style={imgStyle} src="/assets/slide/react.png" /></WGrid>
+                      <WGrid item xs={6} style={style}><img style={imgStyle} src="/assets/slide/typescript.png" /></WGrid>
                     </WGrid>                    
                     <WGrid container style={{ height: '40%' }}>
-                      <WGrid item xs={4} style={style}><img style={imgStyle} src="./assets/slide/redux.png" /></WGrid>
-                      <WGrid item xs={4} style={style}><img style={imgStyle} src="./assets/slide/webpack.png" /></WGrid>
-                      <WGrid item xs={4} style={style}><img style={imgStyle} src="./assets/slide/babel.png" /></WGrid>                      
+                      <WGrid item xs={4} style={style}><img style={imgStyle} src="/assets/slide/redux.png" /></WGrid>
+                      <WGrid item xs={4} style={style}><img style={imgStyle} src="/assets/slide/webpack.png" /></WGrid>
+                      <WGrid item xs={4} style={style}><img style={imgStyle} src="/assets/slide/babel.png" /></WGrid>                      
                     </WGrid>
                     <WGrid container style={{ height: '30%' }}>
-                      <WGrid item xs={2} style={style}><img style={imgStyle2} src="./assets/slide/nodejs-new-pantone-black.png" /></WGrid>
-                      <WGrid item xs={2} style={style}><img style={imgStyle2} src="./assets/slide/npm.png" /></WGrid>
-                      <WGrid item xs={2} style={style}><img style={imgStyle2} src="./assets/slide/yarn.png" /></WGrid>
-                      <WGrid item xs={2} style={style}><img style={imgStyle2} src="./assets/slide/material-ui-logo.png" /></WGrid>
-                      <WGrid item xs={2} style={style}><img style={imgStyle2} src="./assets/slide/formik.png" /></WGrid>
-                      <WGrid item xs={2} style={style}><img style={imgStyle2} src="./assets/slide/inversify.png" /></WGrid>
+                      <WGrid item xs={2} style={style}><img style={imgStyle2} src="/assets/slide/nodejs-new-pantone-black.png" /></WGrid>
+                      <WGrid item xs={2} style={style}><img style={imgStyle2} src="/assets/slide/npm.png" /></WGrid>
+                      <WGrid item xs={2} style={style}><img style={imgStyle2} src="/assets/slide/yarn.png" /></WGrid>
+                      <WGrid item xs={2} style={style}><img style={imgStyle2} src="/assets/slide/material-ui-logo.png" /></WGrid>
+                      <WGrid item xs={2} style={style}><img style={imgStyle2} src="/assets/slide/formik.png" /></WGrid>
+                      <WGrid item xs={2} style={style}><img style={imgStyle2} src="/assets/slide/inversify.png" /></WGrid>
                     </WGrid>
                 </div>
               </div>

@@ -34,7 +34,7 @@ export class HtmlSlide extends React.Component<HtmlSlideProps, any> {
             <div style={{ display: 'table', height: '100%', width: '100%' }}>
               <div style={{ display: 'table-cell', verticalAlign: 'middle', textAlign: 'center' }}>
                 <div style={{ backgroundColor: '#FFFFFFAA', borderRadius: 10, padding: 10, width: 'fit-content', margin: 'auto' }}>
-                  <img src="./assets/slide/html-tag-parts.png" />
+                  <img src="/assets/slide/html-tag-parts.png" />
                 </div>
               </div>
             </div>
