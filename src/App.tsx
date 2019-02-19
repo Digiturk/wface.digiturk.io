@@ -1,7 +1,7 @@
 import { withStyles } from '@material-ui/core';
 import * as WFace from '@wface/components';
 import * as React from 'react';
-import { Redirect, Route, withRouter } from 'react-router-dom';
+import { Redirect, Route, withRouter, Link, Switch } from 'react-router-dom';
 import GetStartedPage from './pages/get-started';
 import MainPage from './pages/main-page';
 import ComponentsPage from './pages/components';
@@ -16,7 +16,7 @@ import Text from './components/text';
 
 class AppInner extends React.Component<any, any> {
 
-  constructor(props:any) {
+  constructor(props: any) {
     super(props);
     this.state = {
       userMenuAnchor: null
@@ -24,15 +24,20 @@ class AppInner extends React.Component<any, any> {
   }
 
   renderMenuLink = (href: string, text: string | React.ReactElement<any>): React.ReactNode => (
-    <WFace.WButton
-      variant="flat"
-      color="inherit"
-      href={"#" + href}
-      className={this.props.classes.linkButton}
-      style={{ opacity: this.props.location.pathname.startsWith("/" + href) ? 1 : 0.5 }}
-    >
-      {text}
-    </WFace.WButton>
+    <Link to={"/" + href} style={{ textDecoration: 'none' }}>
+      <WFace.WButton
+        className={this.props.classes.linkButton}
+        style={{
+          opacity: (href === "" ?
+            this.props.location.pathname === "/"
+            :
+            this.props.location.pathname.startsWith("/" + href)) ? 1 : 0.5
+        }}
+        variant="flat"
+      >
+        {text}
+      </WFace.WButton>
+    </Link>
   )
 
   changeLang = (lang: string) => {
@@ -46,17 +51,17 @@ class AppInner extends React.Component<any, any> {
       <div className={classes.root}>
         <WFace.WAppBar position="absolute" className={classes.appBar} elevation={0}>
           <WFace.WToolBar>
-            <WFace.WTypography variant="h5" color="inherit" noWrap className={classes.flex} style={{marginLeft: 20, fontWeight: 500}}>
+            <WFace.WTypography variant="h5" color="inherit" noWrap className={classes.flex} style={{ marginLeft: 20, fontWeight: 500 }}>
               WFace
             </WFace.WTypography>
 
-            {this.renderMenuLink("main", <Text tr="Ana Sayfa" en="Home"/>)}
-            {this.renderMenuLink("get-started", <Text tr="Başlangıç" en="Get Started"/>)}
-            {this.renderMenuLink("components", <Text tr="Bileşenler" en="Components"/>)}
+            {this.renderMenuLink("", <Text tr="Ana Sayfa" en="Home" />)}
+            {this.renderMenuLink("get-started", <Text tr="Başlangıç" en="Get Started" />)}
+            {this.renderMenuLink("components", <Text tr="Bileşenler" en="Components" />)}
             {this.renderMenuLink("cli", "WFace CLI")}
             {this.renderMenuLink("blog", "Blog")}
-            {this.renderMenuLink("versions", <Text tr="Versiyonlar" en="Versions"/>)}
-            {this.renderMenuLink("training", <Text tr="Eğitim" en="Training"/>)}
+            {this.renderMenuLink("versions", <Text tr="Versiyonlar" en="Versions" />)}
+            {this.renderMenuLink("training", <Text tr="Eğitim" en="Training" />)}
             <a href="https://github.com/Digiturk/wface" style={{ color: '#FFFFFFCC' }}>
               <WFace.WIcon style={{ fontSize: 25 }} iconSource="fontawesome" icon="fab fa-github" />
             </a>
@@ -66,10 +71,10 @@ class AppInner extends React.Component<any, any> {
                 aria-haspopup="true"
                 onClick={(event) => this.setState({ userMenuAnchor: event.currentTarget })}
                 color="inherit"
-              >                
+              >
                 {this.props.appContext.lang.toUpperCase()}
               </WFace.WButton>
-              <WFace.WMenu              
+              <WFace.WMenu
                 id="menu-appbar"
                 anchorEl={this.state.userMenuAnchor}
                 anchorOrigin={{
@@ -95,14 +100,15 @@ class AppInner extends React.Component<any, any> {
 
         <main className={classes.content}>
           <Scrollbars style={{ width: '100%', height: '100%' }}>
-            <Route exact path="/" render={props => <Redirect to="/main" />} />
-            <Route path="/main" component={MainPage} />
-            <Route path="/get-started" component={GetStartedPage} />
-            <Route path="/components" component={ComponentsPage} />
-            <Route path="/cli" component={CliPage} />
-            <Route path="/blog" component={BlogPage} />
-            <Route path="/versions" component={VersionsPage} />
-            <Route path="/training" component={TrainingPage} />
+            <Switch>
+              <Route exact path="/" component={MainPage} />
+              <Route path="/get-started" component={GetStartedPage} />
+              <Route path="/components" component={ComponentsPage} />
+              <Route path="/cli" component={CliPage} />
+              <Route path="/blog" component={BlogPage} />
+              <Route path="/versions" component={VersionsPage} />
+              <Route path="/training" component={TrainingPage} />
+            </Switch>
           </Scrollbars>
         </main>
       </div>
@@ -127,6 +133,7 @@ const styles: any = (theme: any) => ({
   },
   linkButton: {
     textTransform: 'none',
+    color: '#FFF',
   },
   content: {
     flexGrow: 1,

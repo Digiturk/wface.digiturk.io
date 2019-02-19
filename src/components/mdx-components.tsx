@@ -3,6 +3,7 @@ import { UnControlled as CodeMirror } from 'react-codemirror2'
 import 'codemirror/mode/javascript/javascript'
 import 'codemirror/mode/jsx/jsx'
 import * as WFace from '@wface/components'
+import { Link } from 'react-router-dom';
 
 const mdxComponents = {
   h1: (props: any) => <div>
@@ -16,23 +17,41 @@ const mdxComponents = {
     <br />
     <br />
   </div>,
-  h2: (props: any) => <div><WFace.WTypography variant="h5" {...props} /><br /></div>,  
+  h2: (props: any) => <div><WFace.WTypography variant="h5" {...props} /><br /></div>,
   p: (props: any) => <div><WFace.WTypography variant="subtitle1" {...props} style={{ color: '#65819D' }} /><br /></div>,
   ul: (props: any) => <WFace.WList>{props.children}</WFace.WList>,
   li: (props: any) => (
     <WFace.WListItem>
-      <WFace.WListItemIcon style={{marginRight: 0, alignSelf: 'flex-start'}}><WFace.WIcon style={{ color: '#65819D' }} iconSize="small">keyboard_arrow_right</WFace.WIcon></WFace.WListItemIcon>
+      <WFace.WListItemIcon style={{ marginRight: 0, alignSelf: 'flex-start' }}><WFace.WIcon style={{ color: '#65819D' }} iconSize="small">keyboard_arrow_right</WFace.WIcon></WFace.WListItemIcon>
       <WFace.WListItemText><WFace.WTypography variant="subtitle1" {...props} style={{ color: '#65819D' }} /></WFace.WListItemText>
     </WFace.WListItem>
   ),
-  a: (props: any) => <a href={props.href}
-    style={{
-      color: '#3f51b5',
-      textDecoration: 'none',
-      fontWeight: 500
-    }}>
-    {props.children}
-  </a>,
+  a: (props: any) => {
+    if (props.href.startsWith("http")) {
+      return (
+        <a href={props.href}
+          style={{
+            color: '#3f51b5',
+            textDecoration: 'none',
+            fontWeight: 500
+          }}>
+          {props.children}
+        </a>
+      );
+    }
+    else {
+      return (
+        <Link to={props.href}
+          style={{
+            color: '#3f51b5',
+            textDecoration: 'none',
+            fontWeight: 500
+          }}>
+          {props.children}
+        </Link>
+      );
+    }
+  },
   blockquote: (props: any) => <div>
     <WFace.WPaper elevation={0}
       style={{
@@ -65,7 +84,7 @@ const mdxComponents = {
     {props.children}
   </thead>,
   th: (props: any) => <th style={{ padding: '15px 30px 15px 30px' }}><WFace.WTypography variant="subtitle1" style={{ color: '#65819D' }}>{props.children}</WFace.WTypography></th>,
-  tbody: (props:any) => <tbody >{props.children}</tbody>,
+  tbody: (props: any) => <tbody >{props.children}</tbody>,
   tr: (props: any) => <tr style={{ padding: 20, borderTop: '1px solid #DEE5EE' }}>{props.children}</tr>,
   td: (props: any) => <td style={{ padding: 10, textAlign: 'left' }} ><WFace.WTypography variant="subtitle1" style={{ color: '#91A0B1' }}>{props.children}</WFace.WTypography></td>,
 

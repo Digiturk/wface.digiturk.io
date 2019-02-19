@@ -5,17 +5,20 @@ import Requirements from './Requirements';
 import Setup from './Setup';
 import Usage from './Usage';
 import Text from '../../components/text';
+import { Link } from 'react-router-dom';
 
 class MainPage extends React.Component<any, any> {
 
-  MainButton = (props: {href: string, text: string | React.ReactElement<any>}) => (
-    <WFace.WButton 
-      href={props.href}
-      className={this.props.classes.mainButton}       
-      variant="outlined" 
-    >
-      {props.text}
-    </WFace.WButton>
+  MainButton = (props: { href: string, text: string | React.ReactElement<any> }) => (
+    <Link to={props.href} style={{ textDecoration: 'none' }}>
+      <WFace.WButton
+        // href={props.href}
+        className={this.props.classes.mainButton}
+        variant="outlined"
+      >
+        {props.text}
+      </WFace.WButton>
+    </Link>
   );
 
   public render() {
@@ -27,9 +30,9 @@ class MainPage extends React.Component<any, any> {
           <WFace.WGrid item style={{ textAlign: 'center' }} xs={12}>
             <WFace.WIcon style={{ fontSize: 200, height: 160, color: '#fff' }}>code</WFace.WIcon>
             <WFace.WTypography variant="h6" style={{ fontSize: 50, color: '#fff', marginBottom: 30 }} color="primary">WFace</WFace.WTypography>
-            <this.MainButton href={"#/get-started"} text={<Text tr="Başlangıç" en="Get Started"/>}/>
-            <this.MainButton href={"#/components"} text={<Text tr="Bileşenler" en="Components"/>}/>
-            <this.MainButton href={"#/blog"} text="Blog"/>                   
+            <this.MainButton href={"/get-started"} text={<Text tr="Başlangıç" en="Get Started"/>}/>
+            <this.MainButton href={"/components"} text={<Text tr="Bileşenler" en="Components"/>}/>
+            <this.MainButton href={"/blog"} text="Blog"/>                   
           </WFace.WGrid>
         </WFace.WGrid>
         <WFace.WGrid container style={{ padding:'20px 0px 20px 0px', textAlign: 'left' }}>

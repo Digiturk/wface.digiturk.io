@@ -6,16 +6,16 @@ import * as ReactDOM from 'react-dom'
 import App from './App'
 import store from './store';
 import { Provider } from 'react-redux';
-import { HashRouter } from 'react-router-dom';
+import { HashRouter, BrowserRouter } from 'react-router-dom';
 import WMuiThemeProvider from './WMuiThemeProvider';
 
 ReactDOM.render(
   <Provider store={store}>
-    <HashRouter>
+    <BrowserRouter>
       <WMuiThemeProvider>
         <App />
       </WMuiThemeProvider>
-    </HashRouter>
+    </BrowserRouter>
   </Provider>,
   document.getElementById("root")
 );

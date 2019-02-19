@@ -28,12 +28,12 @@ export class WFaceDocs extends React.Component<WFaceDocsProps, any> {
               <div style={{ display: 'table-cell', verticalAlign: 'middle', textAlign: 'center' }}>
                 <div style={{ width: 'fit-content', margin: 'auto' }}>
                   <WTypography variant="h4" style={{ color: constants.primaryColor, fontWeight: 500, maxWidth: 800 }}>
-                    wface.digiturk.net<br/>
+                    wface.digiturk.io<br/>
                     <WButton 
                       variant="outlined" 
                       style={{color: constants.primaryColor, marginTop: 30}}
                       onClick={() => {
-                        var win = window.open("http://wface.digiturk.net/#/Pages/GetStarted/Setup", '_blank');
+                        var win = window.open("http://wface.digiturk.io", '_blank');
                         win.focus();
                       }}
                   >
