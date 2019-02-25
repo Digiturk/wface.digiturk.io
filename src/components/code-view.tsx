@@ -7,7 +7,7 @@ export interface CodeMirrorProps {
   code?: string;
   children?: string;
   lineNumbers?: boolean;
-  selection: {ranges:any[], focus?: boolean}
+  selection?: {ranges:any[], focus?: boolean}
 }
 export default (props: CodeMirrorProps) => (
   <CodeMirror
