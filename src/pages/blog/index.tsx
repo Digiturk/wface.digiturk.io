@@ -65,6 +65,12 @@ const menuTree = [
     path: 'i-app-hooks',
     mdx: Mdx.IAppHooks,
   },
+  {
+    id: 'search-provider',
+    text: 'Arama Özelliği',
+    path: 'search-provider',
+    mdx: Mdx.SearchProvider,
+  },
 ]
 
 

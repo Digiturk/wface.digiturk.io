@@ -1,0 +1,69 @@
+import { WDivider, WIcon } from '@wface/components'
+import CodeView from '../../../components/code-view'
+
+# Arama Özelliği
+
+Ekranın sağ üst köşesinde bulunan arama kutusu isteğe göre özelleştirilebilir. 
+
+## Arama özelliğinin devre dışı bırakılması
+
+Arama özelliğini tamamen kapatıp ekrandan arama kutusunun kaldırılması için configurationda `search:false` değerinin verilmesi gerekir.
+Varsayılan olarak arama özelliği kapalıdır. 
+
+## Ekranların aranabilmesi
+
+Configuration ile `search:true` değeri verilmesi durumunda arama kutusu görünür hale gelir ve ekran arama özelliği aktifleşir. 
+
+## Arama Özelleştirme
+
+Arama kutusunda arama yapıldığında uygulamaya özel sonuçlar gösterilmek isteniyorsa bu durumda `ISearchProvider` interface'inin implemente edilmesi gerekir. 
+`ISearchProvider` sınıfınızı configurationda `search: MySearchProvider` şeklinde vermenir gerekiyor. 
+
+### Örnek bir ISearchProvider implementasyonu
+
+<CodeView>
+  {`
+import * as React from 'react';
+import * as WFace from '@wface/components';
+import { ISearchProvider, IHttpService, IMenuTreeItem } from '@wface/ioc';
+import { injectable, inject } from "inversify";
+import { AppContext } from '@wface/store';
+\n
+@injectable()
+export default class MySearchProvider implements ISearchProvider {
+\n
+  @inject("IHttpService") httpService : IHttpService;
+  @inject("AppContext") appContext: AppContext;
+  @inject("openScreen") openScreen: (item: IMenuTreeItem) => void;
+\n
+  search(term: string): Promise<any[]> {
+    return new Promise((resolve, reject) => {
+      const result = [];// burada result değişkenine bir liste vermeniz gerekiyor
+      resolve(result);
+    })
+  }
+\n
+  renderSearchItem(item: any): React.ReactNode {
+    // Bu fonksiyon ile her bir arama sonucunuzun listede görüntülenmesini özelleştirebilirsiniz. 
+    return (
+      <WFace.WListItem dense key={"key-search-item-" + item.id}>
+        <WFace.WListItemIcon>
+          <WFace.WIcon iconSize="small">{item.icon}</WFace.WIcon>
+        </WFace.WListItemIcon>
+        <WFace.WListItemText>
+          {item.text}
+        </WFace.WListItemText>
+      </WFace.WListItem>
+    );
+  }
+\n
+  onItemSelected(item: any) {
+    // burda bir nesne seçildiğinde yapacaklarınızı yazabilirsiniz. 
+\n
+    // Örnek olarak bir ekran açabilirsiniz. 
+    // this.openScreen(item);
+  }
+}`}
+</CodeView>
+
+

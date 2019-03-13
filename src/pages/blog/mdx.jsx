@@ -12,6 +12,7 @@ import FormDataPersistency from './pages/form-data-persistency.mdx';
 import ScreenModeUsage from './pages/screen-mode-usage.mdx';
 import LocalstorageUsage from './pages/localstorage-usage.mdx';
 import IAppHooks from './pages/i-app-hooks.mdx';
+import SearchProvider from './pages/search-provider.mdx';
 
 
 const Mdx = {
@@ -24,6 +25,7 @@ const Mdx = {
   ScreenModeUsage: () => <ScreenModeUsage components={mdxComponents}/>,
   LocalstorageUsage: () => <LocalstorageUsage components={mdxComponents}/>,  
   IAppHooks: () => <IAppHooks components={mdxComponents}/>,  
+  SearchProvider: () => <SearchProvider components={mdxComponents}/>,    
 }
 
 export default Mdx
