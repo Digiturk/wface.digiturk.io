@@ -12,6 +12,12 @@ export default class VersionsPage extends React.Component<any, any> {
 
 const menuTree = [
   {
+    id: 'v0.18.0',
+    text: 'v0.18.0',
+    path: '0-18-0',
+    mdx: Mdx.V0180Component
+  },
+  {
     id: 'v0.17.0',
     text: 'v0.17.0',
     path: '0-17-0',
@@ -24,15 +30,15 @@ const menuTree = [
     mdx: Mdx.V0160Component
   },
   {
-    id: 'v0.15.0',
-    text: 'v0.15.0',
-    path: '0-15-0',
-    mdx: Mdx.V0150Component
-  },
-  {
     id: 'old-versions',
     text: 'Eski Versiyonlar',
     subNodes: [
+      {
+        id: 'v0.15.0',
+        text: 'v0.15.0',
+        path: '0-15-0',
+        mdx: Mdx.V0150Component
+      },
       {
         id: 'v0.14.0',
         text: 'v0.14.0',
