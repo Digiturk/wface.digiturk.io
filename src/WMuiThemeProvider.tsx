@@ -1,15 +1,12 @@
-import * as React from 'react';
-import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
-import indigo from '@material-ui/core/colors/indigo';
-import pink from '@material-ui/core/colors/pink';
-import red from '@material-ui/core/colors/red';
 import blue from '@material-ui/core/colors/blue';
 import green from '@material-ui/core/colors/green';
 import orange from '@material-ui/core/colors/orange';
+import red from '@material-ui/core/colors/red';
+import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
+import { Palette, PaletteColor } from "@material-ui/core/styles/createPalette";
+import * as React from 'react';
+import { WThemeProvider } from '@wface/components';
 
-import { Palette, PaletteColor, TypeText, TypeAction, TypeBackground, SimplePaletteColorOptions } from "@material-ui/core/styles/createPalette";
-import { CommonColors } from "@material-ui/core/colors/common";
-import { PaletteType, Color } from "@material-ui/core";
 
 interface WPalette extends Palette {
   info: PaletteColor;
@@ -52,13 +49,15 @@ const theme = createMuiTheme({
   }
 });
 
-// <MuiThemeProvider theme={theme}>
-export default class WMuiThemeProvider extends React.Component<{}, {}> {
-  public render() {
-    return (
-      <MuiThemeProvider theme={theme}>
-        {this.props.children}
-      </MuiThemeProvider>
-    );
-  }
-}
+export default (props: any) => <WThemeProvider theme={theme} {...props} />
+
+// // <MuiThemeProvider theme={theme}>
+// export default class WMuiThemeProvider extends React.Component<{}, {}> {
+//   public render() {
+//     return (
+//       <MuiThemeProvider theme={theme}>
+//         {this.props.children}
+//       </MuiThemeProvider>
+//     );
+//   }
+// }
