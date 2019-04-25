@@ -50,14 +50,3 @@ const theme = createMuiTheme({
 });
 
 export default (props: any) => <WThemeProvider theme={theme} {...props} />
-
-// // <MuiThemeProvider theme={theme}>
-// export default class WMuiThemeProvider extends React.Component<{}, {}> {
-//   public render() {
-//     return (
-//       <MuiThemeProvider theme={theme}>
-//         {this.props.children}
-//       </MuiThemeProvider>
-//     );
-//   }
-// }
