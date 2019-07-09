@@ -1,0 +1,31 @@
+import { WIcon } from '@wface/components'
+import Issue from '../../../components/github-issue-link'
+
+# v0.19.0
+
+**09.07.2019**
+
+> Blog: [__Versiyon yükseltme nasıl yapılır?__](/blog/how-to-version-upgrade)
+
+## Değişiklikler
+
+| Madde             | Tür           | Açıklama                                                                                          |
+|:------------------|:--------------|:--------------------------------------------------------------------------------------------------|
+|                   | feature       | Configuration'a `components` tanımlanarak tüm bileşenler değiştirilebilir yapıldı.                |
+|                   | feature       | Configuration `authRequired` alanı eklenerek ekranlara doğrudan erişime izin verilmiştir          |
+
+<br/>
+<br/>
+
+## Zorunlu Değişiklikler
+
+`wface.config.ts` dosyasında verilen configuration nesnesi içindeki `LoginScreen` değişkeni components.LoginPage şeklinde verilmelidir. 
+
+```javascript
+LoginScreen: MyLoginScreen, // Bu satır silinecek 
+
+// Yerine bu şekilde tanımlama yapılacak. 
+components:{
+  LoginPage: MyLoginScreen 
+}
+```

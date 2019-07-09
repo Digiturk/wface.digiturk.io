@@ -12,9 +12,10 @@ import V0120Component from './pages/old-versions/v0.12.0.mdx';
 import V0130Component from './pages/old-versions/v0.13.0.mdx';
 import V0140Component from './pages/old-versions/v0.14.0.mdx';
 import V0150Component from './pages/old-versions/v0.15.0.mdx';
-import V0160Component from './pages/v0.16.0.mdx';
+import V0160Component from './pages/old-versions/v0.16.0.mdx';
 import V0170Component from './pages/v0.17.0.mdx';
 import V0180Component from './pages/v0.18.0.mdx';
+import V0190Component from './pages/v0.19.0.mdx';
 
 const Mdx = {
   V070Component: () => <V070Component components={mdxComponents}/>,
@@ -29,6 +30,7 @@ const Mdx = {
   V0160Component: () => <V0160Component components={mdxComponents}/>,
   V0170Component: () => <V0170Component components={mdxComponents}/>,
   V0180Component: () => <V0180Component components={mdxComponents}/>,
+  V0190Component: () => <V0190Component components={mdxComponents}/>,
 }
 
 export default Mdx
