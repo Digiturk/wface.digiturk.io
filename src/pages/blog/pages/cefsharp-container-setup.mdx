@@ -1,0 +1,54 @@
+import { WDivider, WIcon } from '@wface/components'
+import CodeView from '../../../components/code-view'
+
+# Cefsharp Container Kurulumu
+
+WFace ekranlarının WindowsForm veya WPF uygulamalarından kullanılabilmesini sağlamak amacı ile `@wface/cefsharp-container` modülü geliştirilmiştir.
+Böylece WFace ana sayfası ve menüsü kullanım dışı bırakılıp ekranlar doğrudan URL ile açılabilmektedir. Bu yapıya uygun bir proje altyapısını kurmak için 
+aşağıdaki işlemler yapılmalıdır:
+
+- WFace CLI'yı bilgisayarınıza kurun. [Bknz](/get-started/setup)
+- Normal bir WFace projesi oluşturun. [Bknz](/get-started/usage)
+- Yeni oluşturduğunuz projenin ana dizininde `npm i --save @wface/cefsharp-container` ile yeni modülü projenize dahil edin.
+- `configs/wface/wface.config.ts` dosyasını aşağıdaki şekilde düzenleyin:
+<CodeView>
+  {`
+import { IConfiguration } from "@wface/ioc";
+import AuthService from '../../src/services/auth-service';
+// Kullanacağımız yeni implementasyonlar bu modülden geliyor. 
+import { HttpService, MainPage, ScreenWrapper } from '@wface/cefsharp-container'; 
+import { Messages } from '../../src/screens/messages';
+import { WTheme } from '@wface/components';
+\n
+const theme = {
+} as WTheme
+\n
+const config = {
+  projectName: 'Winform',
+  screenList: {
+    Messages,
+  },
+  components: {
+    // Ekranlarımız cefsharp içinden açılacağı için bir çerçeveye ve menüye ihtiyacımız yok. 
+    MainPage, 
+    // Ekran yöneticisini cefsharp ile haberleşebilen yeni bir bileşen ile değiştiriyoruz. 
+    ScreenWrapper 
+  },
+  // login gerekliliğini kapatiyoruz
+  authRequired: false, 
+  authService: AuthService, 
+  // Cefsharp container içindeki HttpService'i kullanıyoruz. 
+  httpService: HttpService, 
+  theme: theme,
+} as IConfiguration
+\n
+export default config;
+`}
+</CodeView>
+
+> Burda önemli olan `compenents` ve `httpService` ayarlamalarıdır. Bu değişiklikler ile `MainPage`, `ScreenWrapper` ve `HttpService` cefsharp tarafından register 
+edilen javascript nesnesine yönlendirilmektedir. 
+
+- Bunların dışında yapılması gereken ekstra bir işlem bulunmamaktadır. WFace sanki normal ortamında çalışıyor gibi geliştirmeler yapılabilir. 
+
+

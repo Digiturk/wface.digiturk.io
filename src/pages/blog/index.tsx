@@ -71,6 +71,12 @@ const menuTree = [
     path: 'search-provider',
     mdx: Mdx.SearchProvider,
   },
+  {
+    id: 'cefsharp-container-setup',
+    text: 'Cefsharp Container Kurulumu',
+    path: 'cefsharp-container-setup',
+    mdx: Mdx.CefsharpContainerSetup,
+  },
 ]
 
 

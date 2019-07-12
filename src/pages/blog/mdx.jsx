@@ -13,6 +13,8 @@ import ScreenModeUsage from './pages/screen-mode-usage.mdx';
 import LocalstorageUsage from './pages/localstorage-usage.mdx';
 import IAppHooks from './pages/i-app-hooks.mdx';
 import SearchProvider from './pages/search-provider.mdx';
+import CefsharpContainerSetup from './pages/cefsharp-container-setup.mdx';
+
 
 
 const Mdx = {
@@ -26,6 +28,7 @@ const Mdx = {
   LocalstorageUsage: () => <LocalstorageUsage components={mdxComponents}/>,  
   IAppHooks: () => <IAppHooks components={mdxComponents}/>,  
   SearchProvider: () => <SearchProvider components={mdxComponents}/>,    
+  CefsharpContainerSetup: () => <CefsharpContainerSetup components={mdxComponents}/>,      
 }
 
 export default Mdx
