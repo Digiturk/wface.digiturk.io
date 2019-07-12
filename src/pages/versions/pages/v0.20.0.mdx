@@ -12,20 +12,3 @@ import Issue from '../../../components/github-issue-link'
 | Madde             | Tür           | Açıklama                                                                                          |
 |:------------------|:--------------|:--------------------------------------------------------------------------------------------------|
 |                   | feature       | `cefsharp-container` modülü eklendi. [Blog](/blog/cefsharp-container-setup)                       |
- 
-
-<br/>
-<br/>
-
-## Zorunlu Değişiklikler
-
-`wface.config.ts` dosyasında verilen configuration nesnesi içindeki `LoginScreen` değişkeni components.LoginPage şeklinde verilmelidir. 
-
-```javascript
-LoginScreen: MyLoginScreen, // Bu satır silinecek 
-
-// Yerine bu şekilde tanımlama yapılacak. 
-components:{
-  LoginPage: MyLoginScreen 
-}
-```
