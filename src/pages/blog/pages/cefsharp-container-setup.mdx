@@ -16,7 +16,7 @@ aşağıdaki işlemler yapılmalıdır:
 import { IConfiguration } from "@wface/ioc";
 import AuthService from '../../src/services/auth-service';
 // Kullanacağımız yeni implementasyonlar bu modülden geliyor. 
-import { HttpService, MainPage, ScreenWrapper } from '@wface/cefsharp-container'; 
+import { AppHooks } from '@wface/cefsharp-container'; 
 import { Messages } from '../../src/screens/messages';
 import { WTheme } from '@wface/components';
 \n
@@ -28,27 +28,19 @@ const config = {
   screenList: {
     Messages,
   },
-  components: {
-    // Ekranlarımız cefsharp içinden açılacağı için bir çerçeveye ve menüye ihtiyacımız yok. 
-    MainPage, 
-    // Ekran yöneticisini cefsharp ile haberleşebilen yeni bir bileşen ile değiştiriyoruz. 
-    ScreenWrapper 
-  },
   // login gerekliliğini kapatiyoruz
   authRequired: false, 
   authService: AuthService, 
-  // Cefsharp container içindeki HttpService'i kullanıyoruz. 
-  httpService: HttpService, 
   theme: theme,
+  hooks: AppHooks // Cefsharp için gerekli değişiklikler bu satır ile yapılıyor. 
 } as IConfiguration
 \n
 export default config;
 `}
 </CodeView>
 
-> Burda önemli olan `compenents` ve `httpService` ayarlamalarıdır. Bu değişiklikler ile `MainPage`, `ScreenWrapper` ve `HttpService` cefsharp tarafından register 
-edilen javascript nesnesine yönlendirilmektedir. 
+- Uygulama __http(s)://url/main/SCREEN_NAME__ şeklinde cağrıldığında normal wface ekranı açılacaktır. 
+__http(s)://url/main/SCREEN_NAME?appType=standalone__ şeklinde çağrıldığında ise sadece SCREEN_NAME formu açılacaktır. 
 
-- Bunların dışında yapılması gereken ekstra bir işlem bulunmamaktadır. WFace sanki normal ortamında çalışıyor gibi geliştirmeler yapılabilir. 
 
 
