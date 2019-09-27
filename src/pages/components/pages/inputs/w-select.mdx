@@ -1,5 +1,4 @@
-import WPlayground from '../../../../components/w-playground'
-import { WSelect } from '@wface/components'
+import LiveCode from '../../../../components/live-code'
 
 # WSelect
 
@@ -17,9 +16,9 @@ Eklenen ve değiştirilen özellikler aşağıdaki gibidir:
 
 ### Örnekler
 
-<WPlayground header="Temel Kullanım"
+<LiveCode title="Temel Kullanım"
 code={`
-<WSelect  
+<WFace.WSelect  
   label="Şehir"
   options={[
     {label: 'Adana', value: '1'},
@@ -28,21 +27,11 @@ code={`
     {label: 'Şanlıurfa', value: '63'}
   ]}
 />
-`}>
-  <WSelect  
-    label="Şehir"
-    options={[
-      {label: 'Adana', value: '1'},
-      {label: 'Gaziantep', value: '27'},
-      {label: 'İstanbul', value: '34'},
-      {label: 'Şanlıurfa', value: '63'}
-    ]}
-  />
-</WPlayground><br/>
+`}/><br/>
 
-<WPlayground header="Çoklu Seçim"
+<LiveCode title="Çoklu Seçim"
 code={`
-<WSelect
+<WFace.WSelect
   label="Şehirler"
   options={[
     {label: 'Adana', value: '1'},
@@ -52,15 +41,4 @@ code={`
   ]}
   isMulti
 />
-`}>
-  <WSelect
-    label="Şehirler"
-    options={[
-      {label: 'Adana', value: '1'},
-      {label: 'Gaziantep', value: '27'},
-      {label: 'İstanbul', value: '34'},
-      {label: 'Şanlıurfa', value: '63'}
-    ]}
-    isMulti
-  />
-</WPlayground><br/>
+`}/><br/>

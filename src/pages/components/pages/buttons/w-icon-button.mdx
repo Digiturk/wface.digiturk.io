@@ -1,5 +1,4 @@
-import WPlayground from '../../../../components/w-playground'
-import { WIconButton, WIcon } from '@wface/components'
+import LiveCode from '../../../../components/live-code'
 
 # WIconButton
 
@@ -20,8 +19,10 @@ Eklenen ve değiştirilen özellikler aşağıdaki gibidir:
 
 ### Örnekler
 
-<WPlayground header="Temel Kullanım">
-<WIconButton style={{margin:10}} icon="send"/>
-<WIconButton style={{margin:10}} color="secondary" icon="code"/>
-<WIconButton style={{margin:10}} disabled={true} icon="block"/>
-</WPlayground><br/>
+<LiveCode header="Temel Kullanım" code={`
+<>
+  <WFace.WIconButton style={{margin:10}} icon="send"/>
+  <WFace.WIconButton style={{margin:10}} color="secondary" icon="code"/>
+  <WFace.WIconButton style={{margin:10}} disabled={true} icon="block"/>
+</>
+`}/><br/>

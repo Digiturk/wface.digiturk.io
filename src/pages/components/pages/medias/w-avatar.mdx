@@ -1,5 +1,4 @@
-import WPlayground from '../../../../components/w-playground'
-import { WAvatar, WIcon } from '@wface/components'
+import LiveCode from '../../../../components/live-code'
 
 # WAvatar
 
@@ -17,32 +16,33 @@ Eklenen ve değiştirilen özellikler aşağıdaki gibidir:
 
 ### Örnekler
 
-<WPlayground header="Resim Avatarlar" style={{display: 'flex'}}>
-<WAvatar 
-  style={{margin: 10}}
-  alt="bein HD1" 
-  src="https://www.w3schools.com/howto/img_avatar.png"/>
-<WAvatar 
-  style={{margin: 10, width: 60, height: 60}}
-  alt="bein HD1" 
-  src="https://www.w3schools.com/howto/img_avatar.png"/>
-</WPlayground><br/>
+<LiveCode title="Resim Avatarlar" code={`
+<>
+  <WFace.WAvatar 
+    style={{margin: 10}}
+    alt="bein HD1" 
+    src="https://www.w3schools.com/howto/img_avatar.png"
+  />
+  <WFace.WAvatar 
+    style={{margin: 10, width: 60, height: 60}}
+    alt="bein HD1" 
+    src="https://www.w3schools.com/howto/img_avatar.png"
+  />
+</>
+`}/>
 
-<WPlayground header="Icon Avatarlar" style={{display: 'flex'}} 
-code={`
-<WAvatar style={{margin: 10, backgroundColor: '#e91e63'}}>
-  <WIcon>send</WIcon>
-</WAvatar>
-`}>
-<WAvatar style={{margin: 10, backgroundColor: '#e91e63'}}>
-  <WIcon>send</WIcon>
-</WAvatar>
-</WPlayground><br/>
+<LiveCode title="Icon Avatarlar" code={`
+<WFace.WAvatar style={{margin: 10, backgroundColor: '#e91e63'}}>
+  <WFace.WIcon>send</WFace.WIcon>
+</WFace.WAvatar>
+`}/>
 
-<WPlayground header="Harf Avatarlar" style={{display: 'flex'}}>
-<WAvatar style={{margin: 10, backgroundColor: '#e91e63'}}>W</WAvatar>
-<WAvatar style={{margin: 10, backgroundColor: '#e91e63'}}>F</WAvatar>
-<WAvatar style={{margin: 10, backgroundColor: '#e91e63'}}>A</WAvatar>
-<WAvatar style={{margin: 10, backgroundColor: '#e91e63'}}>C</WAvatar>
-<WAvatar style={{margin: 10, backgroundColor: '#e91e63'}}>E</WAvatar>
-</WPlayground><br/>
+<LiveCode title="Harf Avatarlar" code={`
+<>
+  <WFace.WAvatar style={{margin: 10, backgroundColor: '#e91e63'}}>W</WFace.WAvatar>
+  <WFace.WAvatar style={{margin: 10, backgroundColor: '#e91e63'}}>F</WFace.WAvatar>
+  <WFace.WAvatar style={{margin: 10, backgroundColor: '#e91e63'}}>A</WFace.WAvatar>
+  <WFace.WAvatar style={{margin: 10, backgroundColor: '#e91e63'}}>C</WFace.WAvatar>
+  <WFace.WAvatar style={{margin: 10, backgroundColor: '#e91e63'}}>E</WFace.WAvatar>
+</>
+`}/>

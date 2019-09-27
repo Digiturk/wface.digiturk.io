@@ -1,5 +1,4 @@
-import WPlayground from '../../../../components/w-playground'
-import { WButton, WExpansionPanel, WIcon } from '@wface/components'
+import LiveCode from '../../../../components/live-code'
 
 # WExpansionPanel
 
@@ -17,30 +16,19 @@ Eklenen ve değiştirilen özellikler aşağıdaki gibidir:
 
 
 ### Örnekler
-
-<WPlayground header="Temel Kullanım">
-<WExpansionPanel title="Panel">
+<LiveCode title="Temel Kullanım" code={`
+<WFace.WExpansionPanel title="Panel">
   İçerik
-</WExpansionPanel>
-</WPlayground><br/>
+</WFace.WExpansionPanel>
+`}/>
 
-<WPlayground header="Actions Kullanımı"
-code={`
-<WExpansionPanel title="Panel"
+<LiveCode title="Temel Kullanım" code={`
+<WFace.WExpansionPanel title="Panel"
   actions={[
     {text: "Gönder", onClick: () => { alert('ok')}},
-    {custom: <WButton><WIcon>send</WIcon></WButton>}
+    {custom: <WFace.WButton><WFace.WIcon>send</WFace.WIcon></WFace.WButton>}
   ]}
 >
   İçerik
-</WExpansionPanel>
-`}>
-<WExpansionPanel title="Panel"
-  actions={[
-    {text: "Gönder", onClick: () => { alert('ok')}},
-    {custom: <WButton><WIcon>send</WIcon></WButton>}
-  ]}
->
-  İçerik
-</WExpansionPanel>
-</WPlayground><br/>
+</WFace.WExpansionPanel>
+`}/>

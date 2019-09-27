@@ -1,5 +1,4 @@
-import WPlayground from '../../../../components/w-playground'
-import { WAppBar, WToolBar } from '@wface/components'
+import LiveCode from '../../../../components/live-code'
 
 # WAppBar
 
@@ -17,7 +16,13 @@ Eklenen ve değiştirilen özellikler aşağıdaki gibidir:
 
 ### Örnekler
 
-<WPlayground header="Temel Kullanım">
-<WAppBar style={{margin:10}} position="static"><WToolBar>App Bar</WToolBar></WAppBar>
-<WAppBar style={{margin:10}} position="static" color="secondary"><WToolBar>App Bar</WToolBar></WAppBar>
-</WPlayground><br/>
+<LiveCode title="Temel Kullanım" code={`
+<>
+  <WFace.WAppBar position="static">
+    <WFace.WToolBar>App Bar</WFace.WToolBar>
+  </WFace.WAppBar>
+  <WFace.WAppBar style={{marginTop: 10}} position="static" color="secondary">
+    <WFace.WToolBar>App Bar</WFace.WToolBar>
+  </WFace.WAppBar>
+</>
+`}/>

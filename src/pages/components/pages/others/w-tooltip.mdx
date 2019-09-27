@@ -1,5 +1,4 @@
-import WPlayground from '../../../../components/w-playground'
-import { WTooltip, WIcon, WIconButton, WButton } from '@wface/components'
+import LiveCode from '../../../../components/live-code'
 
 # WTooltip
 
@@ -17,15 +16,12 @@ Eklenen ve değiştirilen özellikler aşağıdaki gibidir:
 
 ### Örnekler
 
-<WPlayground header="Temel Kullanım"
+<LiveCode title="Temel Kullanım"
 code={`
-<WTooltip title="Face Icon"><WIcon  style={{margin:10}}>face</WIcon></WTooltip><br/>
-<WTooltip title="Delete"><WIconButton  style={{margin:10}}><WIcon>clear</WIcon></WIconButton></WTooltip><br/>
-<WTooltip title="Delete Record"><WButton style={{margin:10}}>Delete</WButton></WTooltip><br/>
-<WTooltip title="Tooltip on anything"><span>Text</span></WTooltip><br/>
-`}>
-<WTooltip title="Face Icon"><WIcon  style={{margin:10}}>face</WIcon></WTooltip><br/>
-<WTooltip title="Delete"><WIconButton  style={{margin:10}}><WIcon>clear</WIcon></WIconButton></WTooltip><br/>
-<WTooltip title="Delete Record"><WButton style={{margin:10}}>Delete</WButton></WTooltip><br/>
-<WTooltip title="Tooltip on anything"><span>Text</span></WTooltip><br/>
-</WPlayground><br/>
+<>
+  <WFace.WTooltip title="Face Icon"><WFace.WIcon  style={{margin:10}}>face</WFace.WIcon></WFace.WTooltip><br/>
+  <WFace.WTooltip title="Delete"><WFace.WIconButton  style={{margin:10}}><WFace.WIcon>clear</WFace.WIcon></WFace.WIconButton></WFace.WTooltip><br/>
+  <WFace.WTooltip title="Delete Record"><WButton style={{margin:10}}>Delete</WButton></WFace.WTooltip><br/>
+  <WFace.WTooltip title="Tooltip on anything"><span>Text</span></WFace.WTooltip><br/>
+</>  
+`}/>

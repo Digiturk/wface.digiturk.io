@@ -1,19 +1,16 @@
-import * as React from 'react'
-import { WButton, WTextField, WMessageDialog } from '@wface/components'
-
-export default class WBasicDialogExample extends React.Component<any, any> {
-  constructor(props: any) {
+class WBasicDialogExample extends React.Component {
+  constructor(props) {
     super(props);
     this.state = {
       isOpen: false
     }
   }
 
-  public render() {
+  render() {
     return (
       <div>
-        <WButton onClick={() => this.setState({isOpen: true})}>Dialogu Aç</WButton>
-        <WMessageDialog 
+        <WFace.WButton onClick={() => this.setState({isOpen: true})}>Dialogu Aç</WFace.WButton>
+        <WFace.WMessageDialog 
           title="Başlık"
           open={this.state.isOpen}
           buttons="YesNo"

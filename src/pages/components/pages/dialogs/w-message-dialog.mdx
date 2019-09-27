@@ -1,5 +1,4 @@
-import WPlayground from '../../../../components/w-playground'
-import WMessageDialogExample from './w-message-dialog-example'
+import LiveCode from '../../../../components/live-code'
 
 # WMessageDialog
 
@@ -19,17 +18,4 @@ Dialog içerisinde form ve daha detaylı dialoglar için kullanılabilir.
 
 ### Örnekler
 
-<WPlayground header="Temel Kullanım" code={
-`<WButton onClick={() => this.setState({isOpen: true})}>Dialogu Aç</WButton>
-<WMessageDialog 
-  title="Başlık"
-  open={this.state.isOpen}
-  buttons="YesNo"
-  onButtonClick={(event, button) => { 
-    alert(button + " tıklandı");
-    this.setState({isOpen: false});
-  }}
-  text="WMessageDialog içeriği"
-/>`}>
-<WMessageDialogExample/>
-</WPlayground><br/>
+<LiveCode title="Temel Kullanım" code={require('!!raw-loader!./w-message-dialog-example.tsx').default}/>

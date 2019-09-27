@@ -1,5 +1,4 @@
-import WPlayground from '../../../../components/w-playground'
-import WBasicDialogExample from './w-basic-dialog-example'
+import LiveCode from '../../../../components/live-code'
 
 # WBasicDialog
 
@@ -17,17 +16,4 @@ Dialog içerisinde form ve daha detaylı dialoglar için kullanılabilir.
 
 ### Örnekler
 
-<WPlayground header="Temel Kullanım" code={
-`<WButton onClick={() => this.setState({isOpen: true})}>Dialogu Aç</WButton>
-<WBasicDialog 
-  title="Başlık"
-  open={this.state.isOpen}
-  actions={[
-    {text: 'Kapat', onClick: () => this.setState({isOpen: false})},
-    {text: 'Tamam', onClick: () => alert('Tamam tıklandı')},
-  ]}
->
-  <WTextField label="Dialog içeriği"/>
-</WBasicDialog>`}>
-<WBasicDialogExample/>
-</WPlayground><br/>
+<LiveCode title="Temel Kullanım" code={require('!!raw-loader!./w-basic-dialog-example.tsx').default}/>

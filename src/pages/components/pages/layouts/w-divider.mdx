@@ -1,5 +1,4 @@
-import WPlayground from '../../../../components/w-playground'
-import { WDivider, WTypography } from '@wface/components'
+import LiveCode from '../../../../components/live-code'
 
 # WDivider
 
@@ -17,10 +16,12 @@ Eklenen ve değiştirilen özellikler aşağıdaki gibidir:
 
 ### Örnekler
 
-<WPlayground header="Temel Kullanım">
-<WTypography>Yazılar</WTypography>
-<WDivider/>
-<WTypography>Yazılar</WTypography>
-<WDivider/>
-<WTypography>Yazılar</WTypography>
-</WPlayground><br/>
+<LiveCode title="Temel Kullanım" code={`
+<>
+  <WFace.WTypography>Yazılar</WFace.WTypography>
+  <WFace.WDivider/>
+  <WFace.WTypography>Yazılar</WFace.WTypography>
+  <WFace.WDivider/>
+  <WFace.WTypography>Yazılar</WFace.WTypography>
+</>
+`}/>

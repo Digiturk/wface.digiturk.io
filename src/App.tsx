@@ -9,10 +9,14 @@ import CliPage from './pages/cli';
 import TrainingPage from './pages/training';
 import VersionsPage from './pages/versions';
 import BlogPage from './pages/blog';
+// @ts-ignore
 import { Scrollbars } from 'react-custom-scrollbars';
 import { AppContextActions } from './store';
 import { connect } from 'react-redux';
 import Text from './components/text';
+// @ts-ignore
+import { MDXProvider } from '@mdx-js/react';
+import mdxComponents from './components/mdx-components';
 
 class AppInner extends React.Component<any, any> {
 
@@ -99,17 +103,19 @@ class AppInner extends React.Component<any, any> {
         </WFace.WAppBar>
 
         <main className={classes.content}>
-          <Scrollbars style={{ width: '100%', height: '100%' }}>
-            <Switch>
-              <Route exact path="/" component={MainPage} />
-              <Route path="/get-started" component={GetStartedPage} />
-              <Route path="/components" component={ComponentsPage} />
-              <Route path="/cli" component={CliPage} />
-              <Route path="/blog" component={BlogPage} />
-              <Route path="/versions" component={VersionsPage} />
-              <Route path="/training" component={TrainingPage} />
-            </Switch>
-          </Scrollbars>
+          <MDXProvider components={mdxComponents}>
+            <Scrollbars style={{ width: '100%', height: '100%' }}>
+              <Switch>
+                <Route exact path="/" component={MainPage} />
+                <Route path="/get-started" component={GetStartedPage} />
+                <Route path="/components" component={ComponentsPage} />
+                <Route path="/cli" component={CliPage} />
+                <Route path="/blog" component={BlogPage} />
+                <Route path="/versions" component={VersionsPage} />
+                <Route path="/training" component={TrainingPage} />
+              </Switch>
+            </Scrollbars>
+          </MDXProvider>
         </main>
       </div>
     )

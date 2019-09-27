@@ -1,5 +1,4 @@
-import WPlayground from '../../../../components/w-playground'
-import { WLinearProgress } from '@wface/components'
+import LiveCode from '../../../../components/live-code'
 
 # WLinearProgress
 
@@ -17,26 +16,29 @@ Eklenen ve değiştirilen özellikler aşağıdaki gibidir:
 
 ### Örnekler
 
-<WPlayground header="Temel Kullanım">
-<WLinearProgress style={{margin: 10}}/>
-<WLinearProgress style={{margin: 10}} size={50}/>
-<WLinearProgress style={{margin: 10}} color="secondary"/>
-<WLinearProgress style={{margin: 10}} thickness={10}/>
-</WPlayground><br/>
+<LiveCode title="Temel Kullanım" code={`
+<>
+  <WFace.WLinearProgress style={{margin: 10}}/>
+  <WFace.WLinearProgress style={{margin: 10}} size={50}/>
+  <WFace.WLinearProgress style={{margin: 10}} color="secondary"/>
+  <WFace.WLinearProgress style={{margin: 10}} thickness={10}/>
+</>
+`}/><br/>
 
-<WPlayground header="Determined">
-<WLinearProgress style={{margin: 10}} variant="determinate" value={25}/>
-<WLinearProgress style={{margin: 10}} variant="determinate" value={50}/>
-<WLinearProgress style={{margin: 10}} variant="determinate" value={75}/>
-<WLinearProgress style={{margin: 10}} variant="determinate" value={100}/>
-</WPlayground><br/>
+<LiveCode title="Determined" code={`
+<>
+  <WFace.WLinearProgress style={{margin: 10}} variant="determinate" value={25}/>
+  <WFace.WLinearProgress style={{margin: 10}} variant="determinate" value={50}/>
+  <WFace.WLinearProgress style={{margin: 10}} variant="determinate" value={75}/>
+  <WFace.WLinearProgress style={{margin: 10}} variant="determinate" value={100}/>
+</>  
+`}/><br/>
 
-<WPlayground header="Buffer">
-<WLinearProgress style={{margin: 10}} variant="buffer" value={25} valueBuffer={50}/>
-<WLinearProgress style={{margin: 10}} variant="buffer" value={50} valueBuffer={60}/>
-<WLinearProgress style={{margin: 10}} variant="buffer" value={75} valueBuffer={85}/>
-<WLinearProgress style={{margin: 10}} variant="buffer" value={100} valueBuffer={100}/>
-</WPlayground><br/>
-
-
-
+<LiveCode title="Buffer" code={`
+<>
+  <WFace.WLinearProgress style={{margin: 10}} variant="buffer" value={25} valueBuffer={50}/>
+  <WFace.WLinearProgress style={{margin: 10}} variant="buffer" value={50} valueBuffer={60}/>
+  <WFace.WLinearProgress style={{margin: 10}} variant="buffer" value={75} valueBuffer={85}/>
+  <WFace.WLinearProgress style={{margin: 10}} variant="buffer" value={100} valueBuffer={100}/>
+</>  
+`}/>

@@ -1,7 +1,6 @@
 import React from 'react'
 import 'codemirror/mode/javascript/javascript'
 import 'codemirror/mode/jsx/jsx'
-import mdxComponents from '../../components/mdx-components';
 
 import WFace from './pages/wface.mdx'
 import AdditionalTools from './pages/additional-tools.mdx'
@@ -12,14 +11,14 @@ import Usage from './pages/usage.mdx'
 import Modules from './pages/modules.mdx'
 
 const Mdx = {
-  WFace: () => <WFace components={mdxComponents} />,
-  AdditionalTools: () => <AdditionalTools components={mdxComponents} />,
-  Architecture: () => <Architecture components={mdxComponents} />,
-  Requirements: () => <Requirements components={mdxComponents} />,
-  Setup: () => <Setup components={mdxComponents} />,
-  SupportedPlatforms: () => <SupportedPlatforms components={mdxComponents} />,
-  Usage: () => <Usage components={mdxComponents} />,
-  Modules: () => <Modules components={mdxComponents} />,
+  WFace: () => <WFace/>,
+  AdditionalTools: () => <AdditionalTools/>,
+  Architecture: () => <Architecture/>,
+  Requirements: () => <Requirements/>,
+  Setup: () => <Setup/>,
+  SupportedPlatforms: () => <SupportedPlatforms/>,
+  Usage: () => <Usage/>,
+  Modules: () => <Modules/>,
 }
 
 export default Mdx

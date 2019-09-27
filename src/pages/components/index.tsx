@@ -219,6 +219,12 @@ const menuTree = [
         path: 'w-tab-container',
         mdx: Mdx.WTabContainerComponent
       },
+      {
+        id: '3.6.10',
+        text: 'WNestedPageLayout',
+        path: 'w-nested-page-layout',
+        mdx: Mdx.WNestedPageLayoutComponent
+      },
     ]
   },
   {

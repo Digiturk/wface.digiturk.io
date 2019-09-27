@@ -4,6 +4,8 @@ import 'codemirror/mode/javascript/javascript'
 import 'codemirror/mode/jsx/jsx'
 import * as WFace from '@wface/components'
 import { Link } from 'react-router-dom';
+import { Icon, IconButton, Paper, List, ListItem, ListItemIcon, ListItemText, Typography, Tooltip, withTheme } from '@material-ui/core';
+import { LiveProvider, LiveEditor } from 'react-live';
 
 const mdxComponents = {
   h1: (props: any) => <div>
@@ -87,7 +89,6 @@ const mdxComponents = {
   tbody: (props: any) => <tbody >{props.children}</tbody>,
   tr: (props: any) => <tr style={{ padding: 20, borderTop: '1px solid #DEE5EE' }}>{props.children}</tr>,
   td: (props: any) => <td style={{ padding: 10, textAlign: 'left' }} ><WFace.WTypography variant="subtitle1" style={{ color: '#91A0B1' }}>{props.children}</WFace.WTypography></td>,
-
   inlineCode: (props: any) => <code
     style={{
       backgroundColor: 'rgb(239, 242, 247)',
@@ -97,51 +98,47 @@ const mdxComponents = {
     }}>
     {props.children}
   </code>,
-  code: (props: any) => {
+  code: (props:any) => {
     if (props.className === "language-console") {
       return (
         <div>
-          <WFace.WPaper elevation={0}
+          <Paper elevation={0}
             style={{
-              padding: 15,
+              padding: 10,
               color: '#DDD',
-              backgroundColor: 'rgb(40, 44, 52)',
+              backgroundColor: '#2b3e50',
               fontFamily: 'Inconsolata, Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace',
               fontSize: 16,
               whiteSpace: 'initial'
             }}>
-            {props.children}
-          </WFace.WPaper>
+            <div style={{ display: 'flex' }}>
+              <div style={{ flex: 1 }}>
+                {props.children}
+              </div>
+              <Tooltip title="Copy">
+                <IconButton style={{ padding: 0 }} disableRipple onClick={() => navigator.clipboard.writeText(props.children)}>
+                  <Icon style={{ color: '#FFFFFF99', fontSize: 16 }}>file_copy</Icon>
+                </IconButton>
+              </Tooltip>
+            </div>
+          </Paper>
           <br />
         </div>
       );
     }
-    else if (props.className === "language-javascript") {
-      return <CodeMirror
-        value={props.children.trim()}
-        options={{
-          mode: 'javascript',
-          theme: 'lucario',
-          lineNumbers: false,
-          readOnly: true
-        }}
-        onChange={(editor, data, value) => {
-        }} />;
-    }
-    else if (props.className === "language-jsx") {
-      return <CodeMirror
-        value={props.children.trim()}
-        options={{
-          mode: 'jsx',
-          theme: 'lucario',
-          lineNumbers: false,
-          readOnly: true
-        }}
-        onChange={(editor, data, value) => {
-        }} />;
-    }
     else {
-      return <div>{props.children}</div>;
+      return (
+        <LiveProvider code={props.children.trim()} disabled language={props.className.substr("language-".length)}>
+          <LiveEditor
+            code={props.children.trim()}
+            style={{
+              backgroundColor: '#2b3e50',
+              borderRadius: 5,
+              caretColor: 'white'
+            }}
+          />
+        </LiveProvider>
+      );
     }
   }
 }

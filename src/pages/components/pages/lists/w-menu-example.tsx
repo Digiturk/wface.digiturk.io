@@ -1,35 +1,35 @@
-import * as React from 'react'
-import { WButton, WMenu, WMenuItem } from '@wface/components'
-
-export default class WMenuExample extends React.Component<any, any> {
-  constructor(props: any) {
+class WMenuExample extends React.Component{
+  constructor(props) {
     super(props);
     this.state = {
       anchorEl: null
     }
+
+    this.handleClick = this.handleClick.bind(this);
+    this.handleClose = this.handleClose.bind(this);
   }
 
-  handleClick = (event:any) => {
+  handleClick (event) {
     this.setState({ anchorEl: event.currentTarget });
   };
 
-  handleClose = () => {
+  handleClose () {
     this.setState({ anchorEl: null });
   };
 
-  public render() {
+  render() {
     return (
       <div>
-        <WButton onClick={this.handleClick}>Menüyü Aç/Kapa</WButton>
-        <WMenu
+        <WFace.WButton onClick={this.handleClick}>Menüyü Aç/Kapa</WFace.WButton>
+        <WFace.WMenu
           id="simple-menu"
           anchorEl={this.state.anchorEl}
           open={Boolean(this.state.anchorEl)}
           onClose={this.handleClose}>
-          <WMenuItem onClick={this.handleClose}>Profile</WMenuItem>
-          <WMenuItem onClick={this.handleClose}>My account</WMenuItem>
-          <WMenuItem onClick={this.handleClose}>Logout</WMenuItem>
-        </WMenu>
+          <WFace.WMenuItem onClick={this.handleClose}>Profile</WFace.WMenuItem>
+          <WFace.WMenuItem onClick={this.handleClose}>My account</WFace.WMenuItem>
+          <WFace.WMenuItem onClick={this.handleClose}>Logout</WFace.WMenuItem>
+        </WFace.WMenu>
       </div>
     );
   }

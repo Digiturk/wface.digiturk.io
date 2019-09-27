@@ -1,32 +1,29 @@
-import * as React from 'react'
-import { WCollapse, WButton, WCard, WCardHeader, WCardContent, WCardActions } from '@wface/components'
-
-export default class WCollapseExample extends React.Component<any, any> {
-  constructor(props: any) {
+class WCollapseExample extends React.Component {
+  constructor(props) {
     super(props);
     this.state = {
       isOpen: true
     }
   }
 
-  public render() {
+  render() {
     return (
       <div>
-        <WButton onClick={() => this.setState((prev:any) => ({isOpen: !prev.isOpen}))}>Kartı Kapa/Aç</WButton>
-        <WCollapse in={this.state.isOpen} timeout="auto">
-          <WCard>
-            <WCardHeader 
+        <WFace.WButton onClick={() => this.setState((prev) => ({isOpen: !prev.isOpen}))}>Kartı Kapa/Aç</WFace.WButton>
+        <WFace.WCollapse in={this.state.isOpen} timeout="auto">
+          <WFace.WCard elevation={1}>
+            <WFace.WCardHeader 
               title="Card Title"
               subheader="Card Subheader"/>
-            <WCardContent>
+            <WFace.WCardContent>
               Content
-            </WCardContent>
-            <WCardActions>
-              <WButton variant="text" size="small">Card Action 1</WButton>
-              <WButton variant="text" size="small">Card Action 2</WButton>
-            </WCardActions>
-          </WCard>
-        </WCollapse>
+            </WFace.WCardContent>
+            <WFace.WCardActions>
+              <WFace.WButton variant="text" size="small">Card Action 1</WFace.WButton>
+              <WFace.WButton variant="text" size="small">Card Action 2</WFace.WButton>
+            </WFace.WCardActions>
+          </WFace.WCard>
+        </WFace.WCollapse>
       </div>
     );
   }

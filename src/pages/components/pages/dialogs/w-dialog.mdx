@@ -1,5 +1,5 @@
-import WPlayground from '../../../../components/w-playground'
-import WDialogExample from './w-dialog-example'
+import LiveCode from '../../../../components/live-code'
+
 
 # WDialog
 
@@ -17,20 +17,4 @@ Eklenen ve değiştirilen özellikler aşağıdaki gibidir:
 
 ### Örnekler
 
-<WPlayground header="Temel Kullanım" code={
-`<WButton onClick={() => this.setState({isOpen: true})}>Dialogu Aç</WButton>
-<WDialog 
-  open={this.state.isOpen}          
->
-  <WDialogTitle> 
-    <WTypography color="primary">Başlık</WTypography>
-  </WDialogTitle>
-  <WDialogContent>            
-      <WTextField label="dialog içeriği"/>
-  </WDialogContent>
-  <WDialogActions>
-    <WButton onClick={() => this.setState({isOpen: false})} color="primary">KAPAT</WButton>
-  </WDialogActions>
-</WDialog>`}>
-<WDialogExample/>
-</WPlayground><br/>
+<LiveCode title="Temel Kullanım" code={require('!!raw-loader!./w-dialog-example.tsx').default}/>

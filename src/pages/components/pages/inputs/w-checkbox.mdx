@@ -1,5 +1,4 @@
-import WPlayground from '../../../../components/w-playground'
-import { WCheckbox } from '@wface/components'
+import LiveCode from '../../../../components/live-code'
 
 # WRadioGroup
 
@@ -17,7 +16,9 @@ Eklenen ve değiştirilen özellikler aşağıdaki gibidir:
 
 ### Örnekler
 
-<WPlayground header="Temel Kullanım">
-<WCheckbox label="Checkbox 1" checked/>
-<WCheckbox label="Checkbox 2" checked/>
-</WPlayground><br/>
+<LiveCode title="Temel Kullanım" code={`
+<>
+  <WFace.WCheckbox label="Checkbox 1" checked/>
+  <WFace.WCheckbox label="Checkbox 2" checked/>
+</>
+`}/>

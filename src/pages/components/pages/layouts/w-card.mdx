@@ -1,5 +1,4 @@
-import WPlayground from '../../../../components/w-playground'
-import { WButton, WCard, WCardHeader, WCardContent, WCardActions } from '@wface/components'
+import LiveCode from '../../../../components/live-code'
 
 # WCard
 
@@ -17,31 +16,18 @@ Eklenen ve değiştirilen özellikler aşağıdaki gibidir:
 
 ### Örnekler
 
-<WPlayground header="Temel Kullanım"
+<LiveCode title="Temel Kullanım"
 code={`
-<WCard>
-  <WCardHeader 
+<WFace.WCard elevation={1}>
+  <WFace.WCardHeader 
     title="Card Title"
     subheader="Card Subheader"/>
-  <WCardContent>
+  <WFace.WCardContent>
     Content
-  </WCardContent>
-  <WCardActions>
-    <WButton variant="text" size="small">Card Action 1</WButton>
-    <WButton variant="text" size="small">Card Action 2</WButton>
-  </WCardActions>
-</WCard>
-`}>
-<WCard>
-  <WCardHeader 
-    title="Card Title"
-    subheader="Card Subheader"/>
-  <WCardContent>
-    Content
-  </WCardContent>
-  <WCardActions>
-    <WButton variant="text" size="small">Card Action 1</WButton>
-    <WButton variant="text" size="small">Card Action 2</WButton>
-  </WCardActions>
-</WCard>
-</WPlayground><br/>
+  </WFace.WCardContent>
+  <WFace.WCardActions>
+    <WFace.WButton variant="text" size="small">Card Action 1</WFace.WButton>
+    <WFace.WButton variant="text" size="small">Card Action 2</WFace.WButton>
+  </WFace.WCardActions>
+</WFace.WCard>
+`}/>

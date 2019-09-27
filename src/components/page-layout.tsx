@@ -172,7 +172,7 @@ class PageLayoutInner extends React.Component<any, any> {
           <div style={{marginTop:30, marginLeft:30, marginRight:18, paddingBottom:200}}>
             {prevButtonData && 
               <WFace.WButton 
-                variant="flat" 
+                variant="text" 
                 color="primary" 
                 onClick={() => this.openScreen(prevButtonData)}>
                 <WFace.WIcon style={{marginRight:10}}>arrow_back_ios</WFace.WIcon>
@@ -182,7 +182,7 @@ class PageLayoutInner extends React.Component<any, any> {
             {nextButtonData &&
               <WFace.WButton 
                 style={{float:"right"}} 
-                variant="flat" 
+                variant="text" 
                 color="primary"
                 onClick={() => this.openScreen(nextButtonData)}>
                 {nextButtonData.text}

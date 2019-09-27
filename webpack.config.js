@@ -48,7 +48,7 @@ module.exports = {
                   {
                     loader: 'babel-loader',
                     options: {
-                      presets: ['react']
+                      presets: ['@babel/react']
                     }
                   }, 
                   {
@@ -60,7 +60,7 @@ module.exports = {
                 test: /\.jsx$/,
                 loader: 'babel-loader',
                 options: {
-                    presets: ['react']
+                    presets: ['@babel/react']
                 }
             }
         ]

@@ -1,7 +1,6 @@
 import React from 'react'
 import 'codemirror/mode/javascript/javascript'
 import 'codemirror/mode/jsx/jsx'
-import mdxComponents from '../../components/mdx-components';
 
 import HowToVersionUpgrade from './pages/how-to-version-upgrade.mdx';
 import ProductionBuild from './pages/production-build.mdx';
@@ -18,17 +17,17 @@ import CefsharpContainerSetup from './pages/cefsharp-container-setup.mdx';
 
 
 const Mdx = {
-  HowToVersionUpgrade: () => <HowToVersionUpgrade components={mdxComponents}/>,
-  ProductionBuild: () => <ProductionBuild components={mdxComponents}/>,
-  GeneralVariableUsage: () => <GeneralVariableUsage components={mdxComponents}/>,
-  NewScreenDefinition: () => <NewScreenDefinition components={mdxComponents}/>,
-  OpenCloseScreen: () => <OpenCloseScreen components={mdxComponents}/>,
-  FormDataPersistency: () => <FormDataPersistency components={mdxComponents}/>,
-  ScreenModeUsage: () => <ScreenModeUsage components={mdxComponents}/>,
-  LocalstorageUsage: () => <LocalstorageUsage components={mdxComponents}/>,  
-  IAppHooks: () => <IAppHooks components={mdxComponents}/>,  
-  SearchProvider: () => <SearchProvider components={mdxComponents}/>,    
-  CefsharpContainerSetup: () => <CefsharpContainerSetup components={mdxComponents}/>,      
+  HowToVersionUpgrade: () => <HowToVersionUpgrade/>,
+  ProductionBuild: () => <ProductionBuild/>,
+  GeneralVariableUsage: () => <GeneralVariableUsage/>,
+  NewScreenDefinition: () => <NewScreenDefinition/>,
+  OpenCloseScreen: () => <OpenCloseScreen/>,
+  FormDataPersistency: () => <FormDataPersistency/>,
+  ScreenModeUsage: () => <ScreenModeUsage/>,
+  LocalstorageUsage: () => <LocalstorageUsage/>,  
+  IAppHooks: () => <IAppHooks/>,  
+  SearchProvider: () => <SearchProvider/>,    
+  CefsharpContainerSetup: () => <CefsharpContainerSetup/>,      
 }
 
 export default Mdx

@@ -1,5 +1,4 @@
-import WPlayground from '../../../../components/w-playground'
-import { WSwipeableViews } from '@wface/components'
+import LiveCode from '../../../../components/live-code'
 
 # WSwipeableView
 
@@ -17,10 +16,10 @@ Eklenen ve değiştirilen özellikler aşağıdaki gibidir:
 
 ### Örnekler
 
-<WPlayground header="Temel Kullanım">
-<WSwipeableViews enableMouseEvents>
+<LiveCode title="Temel Kullanım" code={`
+<WFace.WSwipeableViews enableMouseEvents>
   <div style={{height: 100, padding: 20, backgroundColor: 'green'}}>view 1</div>
   <div style={{height: 100, padding: 20, backgroundColor: 'red'}}>view 2</div>
   <div style={{height: 100, padding: 20, backgroundColor: 'yellow'}}>view 3</div>
-</WSwipeableViews>
-</WPlayground>
+</WFace.WSwipeableViews>
+`}/>

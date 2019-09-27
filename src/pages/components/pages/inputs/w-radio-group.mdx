@@ -1,5 +1,4 @@
-import WPlayground from '../../../../components/w-playground'
-import { WTypography, WRadioGroup, WRadio } from '@wface/components'
+import LiveCode from '../../../../components/live-code'
 
 # WRadioGroup
 
@@ -17,9 +16,9 @@ Eklenen ve değiştirilen özellikler aşağıdaki gibidir:
 
 ### Örnekler
 
-<WPlayground header="Temel Kullanım">
-<WRadioGroup value="2">
-  <WRadio value="1" label="Radio 1"/>
-  <WRadio value="2" label="Radio 2"/> 
-</WRadioGroup>  
-</WPlayground><br/>
+<LiveCode title="Temel Kullanım" code={`
+<WFace.WRadioGroup value="2">
+  <WFace.WRadio value="1" label="Radio 1"/>
+  <WFace.WRadio value="2" label="Radio 2"/> 
+</WFace.WRadioGroup>  
+`}/>

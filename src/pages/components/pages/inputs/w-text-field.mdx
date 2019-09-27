@@ -1,5 +1,4 @@
-import WPlayground from '../../../../components/w-playground'
-import { WTextField, WIcon, WTextFieldButton } from '@wface/components'
+import LiveCode from '../../../../components/live-code'
 
 # WTextField
 
@@ -18,29 +17,20 @@ Eklenen ve değiştirilen özellikler aşağıdaki gibidir:
 
 ### Örnekler
 
-<WPlayground header="Temel Kullanım" 
+<LiveCode title="Temel Kullanım" 
 code={`
-<WTextField label="Name" style={{margin:10}}/>
-<br/>
-<WTextField 
-  label="Surname"
-  style={{margin:10}}
-  leftButtons={[
-    { icon: <WIcon>add</WIcon>, onClick: () => alert('add button clicked') },    
-  ]}
-  rightButtons={[
-    { icon: <WIcon>save</WIcon>, onClick: () => alert('save button clicked') },    
-  ]}/>
-`}>
-<WTextField label="Name" style={{margin:10}}/>
-<br/>
-<WTextField 
-  label="Surname"
-  style={{margin:10}}
-  leftButtons={[
-    { icon: <WIcon>add</WIcon>, onClick: () => alert('add button clicked') },    
-  ]}
-  rightButtons={[
-    { icon: <WIcon>save</WIcon>, onClick: () => alert('save button clicked') },    
-  ]}/>
-</WPlayground><br/>
+<>
+  <WFace.WTextField label="Name" style={{margin:10}}/>
+  <br/>
+  <WFace.WTextField 
+    label="Surname"
+    style={{margin:10}}
+    leftButtons={[
+      { icon: <WFace.WIcon>add</WFace.WIcon>, onClick: () => alert('add button clicked') },    
+    ]}
+    rightButtons={[
+      { icon: <WFace.WIcon>save</WFace.WIcon>, onClick: () => alert('save button clicked') },    
+    ]}
+  />
+</>
+`}/><br/>

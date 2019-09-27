@@ -20,14 +20,3 @@ export default (props: CodeMirrorProps) => (
       readOnly: true,      
     }} />
 )
-
-
-/*
-selection={{
-    ranges: [{
-      anchor: {ch: 8, line: 5},
-      head: {ch: 37, line: 5}
-    }],
-    focus: true // defaults false if not specified
-  }}
-*/

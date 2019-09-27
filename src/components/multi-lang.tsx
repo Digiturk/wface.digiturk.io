@@ -1,5 +1,5 @@
 import * as React from 'react'
-import MDX from '@mdx-js/runtime/src'
+import MDX from '@mdx-js/runtime';
 import components from './mdx-components';
 import { AppContextActions } from '../store';
 import { connect } from 'react-redux';

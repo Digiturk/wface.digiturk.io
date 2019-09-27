@@ -1,6 +1,6 @@
 import * as React from 'react'
 import * as WFace from '@wface/components'
-const reactElementToJSXString = require('react-element-to-jsx-string');
+const reactElementToJSXString = require('react-element-to-jsx-string').default;
 import CodeView from './code-view';
 
 
@@ -42,7 +42,7 @@ export default class WPlayground extends React.Component<any, any> {
           borderBottom: '1px solid rgb(222, 229, 238)',
           backgroundColor: 'rgb(245, 247, 255)'
         }}>
-          <WFace.WTypography variant="subtitle1" style={{ color: '#65819D', display: 'inline', fontWeight: 500 }}>{this.props.header}</WFace.WTypography>
+          <WFace.WTypography variant="h6" style={{ color: '#65819D', display: 'inline', fontWeight: 500 }}>{this.props.header}</WFace.WTypography>
           <span style={{ top: 0, right: 5, position: 'absolute' }}>
             <WFace.WIconButton onClick={this.btnCollapseClicked}><WFace.WIcon>code</WFace.WIcon></WFace.WIconButton>
           </span>

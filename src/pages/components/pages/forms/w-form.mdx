@@ -1,5 +1,4 @@
-import WPlayground from '../../../../components/w-playground'
-import { WForm, WFormField, WFormValidation } from '@wface/components'
+import LiveCode from '../../../../components/live-code'
 
 # WForm
 
@@ -36,59 +35,39 @@ Form bileşenleri label ve name propertyleri eklenerek aşağıdaki şekilde kul
 
 ### Örnekler
 
-<WPlayground header="Temel Kullanım"
+<LiveCode title="Temel Kullanım"
 code={`
-<WForm initialValues={{company: 'Digiturk', year: 1987}} onSubmit={values => alert(values.company + ", " + values.year)}>
-  <WFormField.TextField name="company" label="Şirket"/>
-  <WFormField.TextField name="year" label="Yıl"/>
-  <WFormField.Submit>GÖSTER</WFormField.Submit>
-</WForm>
-`}>
-  <WForm initialValues={{company: 'Digiturk', year: 1987}} onSubmit={values => alert(values.company + ", " + values.year)}>
-    <WFormField.TextField name="company" label="Şirket"/>
-    <WFormField.TextField name="year" label="Yıl"/>
-    <WFormField.Submit>GÖSTER</WFormField.Submit>
-  </WForm>
-</WPlayground><br/>
+<WFace.WForm initialValues={{company: 'Digiturk', year: 1987}} onSubmit={values => alert(values.company + ", " + values.year)}>
+  <WFace.WFormField.TextField name="company" label="Şirket"/>
+  <WFace.WFormField.TextField name="year" label="Yıl"/>
+  <WFace.WFormField.Submit>GÖSTER</WFace.WFormField.Submit>
+</WFace.WForm>
+`}/><br/>
 
 ### Validasyonlar
 
-
-<WPlayground header="Standart Validasyon"
+<LiveCode title="Standart Validasyon"
 code={`
-<WForm 
+<WFace.WForm 
     initialValues={{company: 'Digiturk', year: 1987}} 
     onSubmit={values => alert(values.company + ", " + values.year)}
-    validationSchema={WFormValidation.object().shape({
-      company: WFormValidation.string().required().max(10),
-      year: WFormValidation.number().required().max(2000).min(1980)
+    validationSchema={WFace.WFormValidation.object().shape({
+      company: WFace.WFormValidation.string().required().max(10),
+      year: WFace.WFormValidation.number().required().max(2000).min(1980)
     })}
   >
-    <WFormField.TextField name="company" label="Şirket"/>
-    <WFormField.TextField name="year" label="Yıl"/>
-    <WFormField.Submit>GÖSTER</WFormField.Submit>
-  </WForm>
-`}>>
-  <WForm 
-    initialValues={{company: 'Digiturk', year: 1987}} 
-    onSubmit={values => alert(values.company + ", " + values.year)}
-    validationSchema={WFormValidation.object().shape({
-      company: WFormValidation.string().required().max(10),
-      year: WFormValidation.number().required().max(2000).min(1980)
-    })}
-  >
-    <WFormField.TextField name="company" label="Şirket"/>
-    <WFormField.TextField name="year" label="Yıl"/>
-    <WFormField.Submit>GÖSTER</WFormField.Submit>
-  </WForm>
-</WPlayground><br/>
+    <WFace.WFormField.TextField name="company" label="Şirket"/>
+    <WFace.WFormField.TextField name="year" label="Yıl"/>
+    <WFace.WFormField.Submit>GÖSTER</WFace.WFormField.Submit>
+</WFace.WForm>
+`}/><br/>
 
 > Standart validasyon için Yup kullanılmaktadır. 
 Yup hakkında daha detaylı bilgiye ulaşmak için [tıklayın](https://github.com/jquense/yup).
 
-<WPlayground header="Özel Validasyon"
+<LiveCode title="Özel Validasyon"
 code={`
-<WForm 
+<WFace.WForm 
   initialValues={{company: 'Digiturk', year: 1987}} 
   onSubmit={values => alert(values.company + ", " + values.year)}
   validate={values => {
@@ -99,24 +78,8 @@ code={`
     return errors;
   }}
 >
-  <WFormField.TextField name="company" label="Şirket"/>
-  <WFormField.TextField name="year" label="Yıl"/>
-  <WFormField.Submit>GÖSTER</WFormField.Submit>
-</WForm>
-`}>
-  <WForm 
-    initialValues={{company: 'Digiturk', year: 1987}} 
-    onSubmit={values => alert(values.company + ", " + values.year)}
-    validate={values => {
-      let errors = {}; 
-      if(values.company != 'Digiturk') {
-        errors.company = 'Sadece Digiturk yazabilirsiniz';
-      }
-      return errors;
-    }}
-  >
-    <WFormField.TextField name="company" label="Şirket"/>
-    <WFormField.TextField name="year" label="Yıl"/>
-    <WFormField.Submit>GÖSTER</WFormField.Submit>
-  </WForm>
-</WPlayground><br/>
+  <WFace.WFormField.TextField name="company" label="Şirket"/>
+  <WFace.WFormField.TextField name="year" label="Yıl"/>
+  <WFace.WFormField.Submit>GÖSTER</WFace.WFormField.Submit>
+</WFace.WForm>
+`}/><br/>

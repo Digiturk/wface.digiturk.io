@@ -1,9 +1,8 @@
-import WPlayground from '../../../../components/w-playground'
-import { WButton, WIcon } from '@wface/components'
+import LiveCode from '../../../../components/live-code'
 
-# WButton
+# WFace.WButton
 
-WButton @material-ui Button'dan türetilmiştir.
+WFace.WButton @material-ui Button'dan türetilmiştir.
 Button'un propertylerine erişmek için [tıklayın](https://material-ui.com/api/button/).
 
 ### Ek Özellikler
@@ -17,60 +16,43 @@ Eklenen ve değiştirilen özellikler aşağıdaki gibidir:
 
 ### Örnekler
 
-<WPlayground header="Temel Kullanım"
+<LiveCode title="Temel Kullanım"
 code={`
-<WButton style={{margin:10}}>Default Button</WButton>
-<WButton style={{margin:10}} color="secondary">Secondary Color</WButton>
-<WButton style={{margin:10}} disabled={true}>Disabled</WButton>
-`}
->
-<WButton style={{margin:10}}>Default Button</WButton>
-<WButton style={{margin:10}} color="secondary">Secondary Color</WButton>
-<WButton style={{margin:10}} disabled={true}>Disabled</WButton>
-</WPlayground><br/>
+<>
+  <WFace.WButton style={{margin:10}}>Default Button</WFace.WButton>
+  <WFace.WButton style={{margin:10}} color="secondary">Secondary Color</WFace.WButton>
+  <WFace.WButton style={{margin:10}} disabled={true}>Disabled</WFace.WButton>
+</>
+`}/><br/>
 
-<WPlayground header="Farklı Görünümler"
+<LiveCode title="Farklı Görünümler"
 code={`
-<WButton style={{margin:10}} variant="text">Text</WButton>
-<WButton style={{margin:10}} variant="flat">Flat</WButton>
-<WButton style={{margin:10}} variant="outlined">Outlined</WButton>
-<WButton style={{margin:10}} variant="contained">Contained</WButton>
-<WButton style={{margin:10}} variant="fab"><WIcon>save</WIcon></WButton>
-<WButton style={{margin:10}} variant="extendedFab">ExtendedFab</WButton>
-`}
->
-<WButton style={{margin:10}} variant="text">Text</WButton>
-<WButton style={{margin:10}} variant="flat">Flat</WButton>
-<WButton style={{margin:10}} variant="outlined">Outlined</WButton>
-<WButton style={{margin:10}} variant="contained">Contained</WButton>
-<WButton style={{margin:10}} variant="fab"><WIcon>save</WIcon></WButton>
-<WButton style={{margin:10}} variant="extendedFab">ExtendedFab</WButton>
-</WPlayground><br/>
+<>
+  <WFace.WButton style={{margin:10}} variant="text">Text</WFace.WButton>
+  <WFace.WButton style={{margin:10}} variant="flat">Flat</WFace.WButton>
+  <WFace.WButton style={{margin:10}} variant="outlined">Outlined</WFace.WButton>
+  <WFace.WButton style={{margin:10}} variant="contained">Contained</WFace.WButton>
+  <WFace.WButton style={{margin:10}} variant="fab"><WFace.WIcon>save</WFace.WIcon></WFace.WButton>
+  <WFace.WButton style={{margin:10}} variant="extendedFab">ExtendedFab</WFace.WButton>
+</>
+`}/><br/>
 
-<WPlayground header="Boyutlar"
+<LiveCode title="Boyutlar"
 code={`
-<WButton style={{margin:10}} size="small">Small</WButton>
-<WButton style={{margin:10}} size="medium">Medium</WButton>
-<WButton style={{margin:10}} size="large">Large</WButton>
-<br/>
-<WButton style={{margin:10}} variant="fab" mini><WIcon>add</WIcon></WButton>
-<WButton style={{margin:10}} variant="fab"><WIcon>add</WIcon></WButton>
-`}
->
-<WButton style={{margin:10}} size="small">Small</WButton>
-<WButton style={{margin:10}} size="medium">Medium</WButton>
-<WButton style={{margin:10}} size="large">Large</WButton>
-<br/>
-<WButton style={{margin:10}} variant="fab" mini><WIcon>add</WIcon></WButton>
-<WButton style={{margin:10}} variant="fab"><WIcon>add</WIcon></WButton>
-</WPlayground><br/>
+<>
+  <WFace.WButton style={{margin:10}} size="small">Small</WFace.WButton>
+  <WFace.WButton style={{margin:10}} size="medium">Medium</WFace.WButton>
+  <WFace.WButton style={{margin:10}} size="large">Large</WFace.WButton>
+  <br/>
+  <WFace.WButton style={{margin:10}} variant="fab" mini><WFace.WIcon>add</WFace.WIcon></WFace.WButton>
+  <WFace.WButton style={{margin:10}} variant="fab"><WFace.WIcon>add</WFace.WIcon></WFace.WButton>
+</>  
+`}/><br/>
 
-<WPlayground header="Icon Kullanımı"
+<LiveCode title="Icon Kullanımı"
 code={`
-<WButton style={{margin:10}}><WIcon style={{marginRight:10}}>send</WIcon>Send</WButton>
-<WButton style={{margin:10}}>Check<WIcon style={{marginLeft:10}}>check</WIcon></WButton>
-`}
->
-<WButton style={{margin:10}}><WIcon style={{marginRight:10}}>send</WIcon>Send</WButton>
-<WButton style={{margin:10}}>Check<WIcon style={{marginLeft:10}}>check</WIcon></WButton>
-</WPlayground><br/>
+<>
+  <WFace.WButton style={{margin:10}}><WFace.WIcon style={{marginRight:10}}>send</WFace.WIcon>Send</WFace.WButton>
+  <WFace.WButton style={{margin:10}}>Check<WFace.WIcon style={{marginLeft:10}}>check</WFace.WIcon></WFace.WButton>
+</>
+`}/><br/>
