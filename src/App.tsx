@@ -30,6 +30,7 @@ class AppInner extends React.Component<any, any> {
   renderMenuLink = (href: string, text: string | React.ReactElement<any>): React.ReactNode => (
     <Link to={"/" + href} style={{ textDecoration: 'none' }}>
       <WFace.WButton
+        id={"menu-btn-" + href}
         className={this.props.classes.linkButton}
         style={{
           opacity: (href === "" ?
@@ -53,8 +54,8 @@ class AppInner extends React.Component<any, any> {
     const { classes } = this.props;
     return (
       <div className={classes.root}>
-        <WFace.WAppBar position="absolute" className={classes.appBar} elevation={0}>
-          <WFace.WToolBar>
+        <WFace.WAppBar id="app-bar" position="absolute" className={classes.appBar} elevation={0}>
+          <WFace.WToolBar id="tool-bar">
             <WFace.WTypography variant="h5" color="inherit" noWrap className={classes.flex} style={{ marginLeft: 20, fontWeight: 500 }}>
               WFace
             </WFace.WTypography>
@@ -71,6 +72,7 @@ class AppInner extends React.Component<any, any> {
             </a>
             <div>
               <WFace.WButton
+                id="btn-lang"
                 aria-owns={Boolean(this.state.userMenuAnchor) ? 'menu-appbar' : null}
                 aria-haspopup="true"
                 onClick={(event) => this.setState({ userMenuAnchor: event.currentTarget })}
@@ -93,7 +95,7 @@ class AppInner extends React.Component<any, any> {
                 onClose={() => this.setState({ userMenuAnchor: null })}
               >
                 {["en", "tr"].map(lang => (
-                  <WFace.WMenuItem key={lang} dense onClick={() => this.changeLang(lang)} selected={this.props.appContext.lang === lang}>
+                  <WFace.WMenuItem id={lang} key={lang} dense onClick={() => this.changeLang(lang)} selected={this.props.appContext.lang === lang}>
                     <WFace.WListItemText primary={lang.toUpperCase()} />
                   </WFace.WMenuItem>
                 ))}
