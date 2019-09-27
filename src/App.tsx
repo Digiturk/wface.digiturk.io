@@ -37,7 +37,7 @@ class AppInner extends React.Component<any, any> {
             :
             this.props.location.pathname.startsWith("/" + href)) ? 1 : 0.5
         }}
-        variant="flat"
+        variant="text"
       >
         {text}
       </WFace.WButton>
@@ -93,7 +93,7 @@ class AppInner extends React.Component<any, any> {
                 onClose={() => this.setState({ userMenuAnchor: null })}
               >
                 {["en", "tr"].map(lang => (
-                  <WFace.WMenuItem dense onClick={() => this.changeLang(lang)} selected={this.props.appContext.lang === lang}>
+                  <WFace.WMenuItem key={lang} dense onClick={() => this.changeLang(lang)} selected={this.props.appContext.lang === lang}>
                     <WFace.WListItemText primary={lang.toUpperCase()} />
                   </WFace.WMenuItem>
                 ))}
