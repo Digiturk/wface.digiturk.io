@@ -1,6 +1,7 @@
 import * as React from 'react'
 import Mdx from './mdx'
 import PageLayout from '../../components/page-layout';
+import mdxComponents from '../../components/mdx-components';
 
 export default class ComponentsPage extends React.Component<any, any> {
   public render() {
@@ -290,6 +291,18 @@ const menuTree = [
         text: 'WTable',
         path: 'w-table',
         mdx: Mdx.WTableComponent
+      }
+    ]
+  },
+  {
+    id: '3.11',
+    text: 'Grafikler',
+    subNodes: [
+      {
+        id: '3.11.1',
+        text: 'WChart',
+        path: 'w-chart',
+        mdx: Mdx.WChartComponent
       }
     ]
   },

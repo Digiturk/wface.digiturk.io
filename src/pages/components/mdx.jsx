@@ -8,6 +8,7 @@ import WAvatarComponent from './pages/medias/w-avatar.mdx'
 import WBasicDialogComponent from './pages/dialogs/w-basic-dialog.mdx'
 import WButtonComponent from './pages/buttons/w-button.mdx'
 import WCardComponent from './pages/layouts/w-card.mdx'
+import WChartComponent from './pages/charts/w-chart.mdx'
 import WCheckboxComponent from './pages/inputs/w-checkbox.mdx'
 import WChipComponent from './pages/others/w-chip.mdx'
 import WCircularProgressComponent from './pages/progress/w-circular-progress.mdx'
@@ -50,6 +51,7 @@ const Mdx = {
   WBasicDialogComponent: () => <WBasicDialogComponent/>,
   WButtonComponent: () => <WButtonComponent/>,
   WCardComponent: () => <WCardComponent/>,
+  WChartComponent: () => <WChartComponent/>,
   WCheckboxComponent: () => <WCheckboxComponent/>,
   WChipComponent: () => <WChipComponent/>,
   WCircularProgressComponent: () => <WCircularProgressComponent/>,
