@@ -44,8 +44,12 @@ const theme = createMuiTheme({
       contrastText: '#fff'
     }
   } as WPalette,
-  typography: {
-    useNextVariants: true
+  overrides: {
+    MuiTooltip: {
+      tooltip: {
+        backgroundColor: '#65819D'
+      }
+    }
   }
 });
 

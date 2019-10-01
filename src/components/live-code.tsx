@@ -45,13 +45,14 @@ class LiveCodeInner extends Component<LiveCodeProps, any> {
             <div className={this.props.classes.topBarActions}>
               <Tooltip title={this.state.codeBlockOpen ? "Hide the source code" : "Show the source code"}>
                 <IconButton
+                  className={this.props.classes.iconButton}
                   onClick={() => this.setState((prev: any) => ({ codeBlockOpen: !prev.codeBlockOpen }))}
                 >
                   <Icon>code</Icon>
                 </IconButton>
               </Tooltip>
               <Tooltip title="Copy the source code">
-                <IconButton onClick={() => navigator.clipboard.writeText(this.state.code)}>
+                <IconButton className={this.props.classes.iconButton} onClick={() => navigator.clipboard.writeText(this.state.code)}>
                   <Icon>file_copy</Icon>
                 </IconButton>
               </Tooltip>
@@ -81,7 +82,7 @@ const styles = (theme: WTheme) => createStyles({
   },
   topBar: {
     display: 'flex',
-    padding: 8,
+    padding: '0 8px',
     borderBottom: '1px solid rgb(222, 229, 238)',
     backgroundColor: 'rgb(245, 247, 255)'
   },
@@ -116,6 +117,9 @@ const styles = (theme: WTheme) => createStyles({
   livePreview: {
     maxWidth: '100%',
     overflow: 'auto'
+  },
+  iconButton: {
+    color: '#65819D'
   }
 });
 
