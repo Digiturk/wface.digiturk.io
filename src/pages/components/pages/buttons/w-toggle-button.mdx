@@ -1,0 +1,37 @@
+import LiveCode from '../../../../components/live-code'
+
+# WToggleButton
+
+WToggleButton @material-ui ToggleButton'dan türetilmiştir.
+ToggleButton'un propertylerine erişmek için [tıklayın](https://material-ui.com/api/toggle-button/).
+
+### Ek Özellikler
+
+Eklenen ve değiştirilen özellikler aşağıdaki gibidir:
+
+| Adı                 | Veri Tipi                                                     | Default | Açıklama                                        |
+|:--------------------|:--------------------------------------------------------------|:--------|:------------------------------------------------|
+|                     |                                                               |         |                                                 |
+
+### Örnekler
+
+<LiveCode title="Temel Kullanım"
+code={`
+<WFace.WToggleButtonGroup  
+  exclusive  
+  aria-label="text alignment"
+>
+  <WFace.WToggleButton value="left" aria-label="left aligned">
+    <WFace.WIcon>format_align_left</WFace.WIcon>    
+  </WFace.WToggleButton>
+  <WFace.WToggleButton value="center" aria-label="centered">
+    <WFace.WIcon>format_align_center</WFace.WIcon>
+  </WFace.WToggleButton>
+  <WFace.WToggleButton value="right" aria-label="right aligned">
+    <WFace.WIcon>format_align_right</WFace.WIcon>
+  </WFace.WToggleButton>
+  <WFace.WToggleButton value="justify" aria-label="justified" disabled>
+    <WFace.WIcon>format_align_justify</WFace.WIcon>
+  </WFace.WToggleButton>
+</WFace.WToggleButtonGroup>
+`}/><br/>

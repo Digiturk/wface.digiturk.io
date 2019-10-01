@@ -1,0 +1,92 @@
+import LiveCode from '../../../../components/live-code'
+
+# WButtonGroup
+
+WButtonGroup @material-ui ButtonGroup'dan türetilmiştir.
+ButtonGroup'un propertylerine erişmek için [tıklayın](https://material-ui.com/api/button-group/).
+
+### Ek Özellikler
+
+Eklenen ve değiştirilen özellikler aşağıdaki gibidir:
+
+| Adı                 | Veri Tipi                                                     | Default | Açıklama                                        |
+|:--------------------|:--------------------------------------------------------------|:--------|:------------------------------------------------|
+|                     |                                                               |         |                                                 |
+
+### Örnekler
+
+<LiveCode title="Temel Kullanım"
+code={`
+<WFace.WGrid container spacing={3} style={{padding: 30}}>
+  <WFace.WGrid item xs={12} md={6}>
+    <WFace.WGrid container spacing={1} direction="column" alignItems="center">
+      <WFace.WGrid item>
+        <WFace.WButtonGroup size="small" aria-label="small outlined button group">
+          <WFace.WButton>One</WFace.WButton>
+          <WFace.WButton>Two</WFace.WButton>
+          <WFace.WButton>Three</WFace.WButton>
+        </WFace.WButtonGroup>
+      </WFace.WGrid>
+      <WFace.WGrid item>
+        <WFace.WButtonGroup color="primary" aria-label="outlined primary button group">
+          <WFace.WButton>One</WFace.WButton>
+          <WFace.WButton>Two</WFace.WButton>
+          <WFace.WButton>Three</WFace.WButton>
+        </WFace.WButtonGroup>
+      </WFace.WGrid>
+      <WFace.WGrid item>
+        <WFace.WButtonGroup
+          color="secondary"
+          size="large"
+          aria-label="large outlined secondary button group"
+        >
+          <WFace.WButton>One</WFace.WButton>
+          <WFace.WButton>Two</WFace.WButton>
+          <WFace.WButton>Three</WFace.WButton>
+        </WFace.WButtonGroup>
+      </WFace.WGrid>
+    </WFace.WGrid>
+  </WFace.WGrid>
+  <WFace.WGrid item xs={12} md={6}>
+    <WFace.WGrid container spacing={1} direction="column" alignItems="center">
+      <WFace.WGrid item>
+        <WFace.WButtonGroup variant="contained" size="small" aria-label="small contained button group">
+          <WFace.WButton>One</WFace.WButton>
+          <WFace.WButton>Two</WFace.WButton>
+          <WFace.WButton>Three</WFace.WButton>
+        </WFace.WButtonGroup>
+      </WFace.WGrid>
+      <WFace.WGrid item>
+        <WFace.WButtonGroup
+          variant="contained"
+          color="primary"
+          aria-label="full-width contained primary button group"
+        >
+          <WFace.WButton>One</WFace.WButton>
+          <WFace.WButton>Two</WFace.WButton>
+          <WFace.WButton>Three</WFace.WButton>
+        </WFace.WButtonGroup>
+      </WFace.WGrid>
+      <WFace.WGrid item>
+        <WFace.WButtonGroup
+          variant="contained"
+          color="secondary"
+          size="large"
+          aria-label="large contained secondary button group"
+        >
+          <WFace.WButton>One</WFace.WButton>
+          <WFace.WButton>Two</WFace.WButton>
+          <WFace.WButton>Three</WFace.WButton>
+        </WFace.WButtonGroup>
+      </WFace.WGrid>
+    </WFace.WGrid>
+  </WFace.WGrid>
+  <WFace.WGrid item xs={12}>
+    <WFace.WButtonGroup fullWidth aria-label="full width outlined button group">
+      <WFace.WButton>Full</WFace.WButton>
+      <WFace.WButton>width</WFace.WButton>
+      <WFace.WButton>ButtonGroup</WFace.WButton>
+    </WFace.WButtonGroup>
+  </WFace.WGrid>
+</WFace.WGrid>
+`}/><br/>

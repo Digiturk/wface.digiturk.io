@@ -5,14 +5,18 @@ import 'codemirror/mode/jsx/jsx'
 import ComponentList from './pages/component-list.mdx'
 import WAppBarComponent from './pages/bars/w-app-bar.mdx'
 import WAvatarComponent from './pages/medias/w-avatar.mdx'
+import WBadgeComponent from './pages/medias/w-badge.mdx'
 import WBasicDialogComponent from './pages/dialogs/w-basic-dialog.mdx'
 import WButtonComponent from './pages/buttons/w-button.mdx'
+import WButtonGroupComponent from './pages/buttons/w-button-group.mdx'
 import WCardComponent from './pages/layouts/w-card.mdx'
 import WChartComponent from './pages/charts/w-chart.mdx'
 import WCheckboxComponent from './pages/inputs/w-checkbox.mdx'
 import WChipComponent from './pages/others/w-chip.mdx'
+import WClickAwayListenerComponent from './pages/others/w-click-away-listener.mdx'
 import WCircularProgressComponent from './pages/progress/w-circular-progress.mdx'
 import WCollapseComponent from './pages/layouts/w-collapse.mdx'
+import WContainerComponent from './pages/layouts/w-container.mdx'
 import WDateTimePickerComponent from './pages/inputs/w-date-time-picker.mdx'
 import WDatePickerComponent from './pages/inputs/w-date-picker.mdx'
 import WDialogComponent from './pages/dialogs/w-dialog.mdx'
@@ -24,6 +28,7 @@ import WGridComponent from './pages/layouts/w-grid.mdx'
 import WIconButtonComponent from './pages/buttons/w-icon-button.mdx'
 import WIconComponent from './pages/medias/w-icon.mdx'
 import WLinearProgressComponent from './pages/progress/w-linear-progress.mdx'
+import WLinkComponent from './pages/medias/w-link.mdx'
 import WListComponent from './pages/lists/w-list.mdx'
 import WLoadingButtonComponent from './pages/buttons/w-loading-button.mdx'
 import WMenuComponent from './pages/lists/w-menu.mdx'
@@ -31,15 +36,22 @@ import WMessageDialogComponent from './pages/dialogs/w-message-dialog.mdx'
 import WNestedPageLayoutComponent from './pages/layouts/w-nested-page-layout.mdx'
 import WNotificationBarComponent from './pages/bars/w-notification-bar.mdx'
 import WPaperComponent from './pages/layouts/w-paper.mdx'
+import WPopoverComponent from './pages/dialogs/w-popover.mdx'
+import WPopperComponent from './pages/dialogs/w-popper.mdx'
 import WRadioGroupComponent from './pages/inputs/w-radio-group.mdx'
+import WRatingComponent from './pages/medias/w-rating.mdx'
 import WSelectComponent from './pages/inputs/w-select.mdx'
-import WScrollBar from './pages/bars/w-scroll-bar.mdx'
+import WScrollBarComponent from './pages/bars/w-scroll-bar.mdx'
+import WSkeletonComponent from './pages/progress/w-skeleton.mdx'
+import WSliderComponent from './pages/inputs/w-slider.mdx'
+import WSpeedDialComponent from './pages/buttons/w-speed-dial.mdx'
 import WSwipeableViewComponent from './pages/layouts/w-swipeable-view.mdx'
 import WSwitchComponent from './pages/inputs/w-switch.mdx'
 import WTableComponent from './pages/tables/w-table.mdx'
 import WTabContainerComponent from './pages/layouts/w-tab-container.mdx'
 import WTextFieldComponent from './pages/inputs/w-text-field.mdx'
 import WTimePickerComponent from './pages/inputs/w-time-picker.mdx'
+import WToggleButtonComponent from './pages/buttons/w-toggle-button.mdx'
 import WToolBarComponent from './pages/bars/w-tool-bar.mdx'
 import WTooltipComponent from './pages/others/w-tooltip.mdx'
 import WTypographyComponent from './pages/others/w-typography.mdx'
@@ -48,14 +60,18 @@ const Mdx = {
   ComponentList: () => <ComponentList/>,
   WAppBarComponent: () => <WAppBarComponent/>,
   WAvatarComponent: () => <WAvatarComponent/>,
+  WBadgeComponent: () => <WBadgeComponent/>,
   WBasicDialogComponent: () => <WBasicDialogComponent/>,
   WButtonComponent: () => <WButtonComponent/>,
+  WButtonGroupComponent: () => <WButtonGroupComponent/>,
   WCardComponent: () => <WCardComponent/>,
   WChartComponent: () => <WChartComponent/>,
   WCheckboxComponent: () => <WCheckboxComponent/>,
   WChipComponent: () => <WChipComponent/>,
+  WClickAwayListenerComponent: () => <WClickAwayListenerComponent/>,
   WCircularProgressComponent: () => <WCircularProgressComponent/>,
   WCollapseComponent: () => <WCollapseComponent/>,
+  WContainerComponent: () => <WContainerComponent/>,  
   WDateTimePickerComponent: () => <WDateTimePickerComponent/>,
   WDatePickerComponent: () => <WDatePickerComponent/>,
   WDialogComponent: () => <WDialogComponent/>,
@@ -67,6 +83,7 @@ const Mdx = {
   WIconButtonComponent: () => <WIconButtonComponent/>,
   WIconComponent: () => <WIconComponent/>,
   WLinearProgressComponent: () => <WLinearProgressComponent/>,
+  WLinkComponent: () => <WLinkComponent/>,
   WListComponent: () => <WListComponent/>,
   WLoadingButtonComponent: () => <WLoadingButtonComponent/>,
   WMessageDialogComponent: () => <WMessageDialogComponent/>,
@@ -74,15 +91,22 @@ const Mdx = {
   WNestedPageLayoutComponent: () => <WNestedPageLayoutComponent/>,
   WNotificationBarComponent: () => <WNotificationBarComponent/>,
   WPaperComponent: () => <WPaperComponent/>,
+  WPopoverComponent: () => <WPopoverComponent/>,
+  WPopperComponent: () => <WPopperComponent/>,
   WRadioGroupComponent: () => <WRadioGroupComponent/>,
+  WRatingComponent: () => <WRatingComponent/>,
   WSelectComponent: () => <WSelectComponent/>,
-  WScrollBar: () => <WScrollBar/>,
+  WScrollBarComponent: () => <WScrollBarComponent/>,
+  WSkeletonComponent: () => <WSkeletonComponent/>,
+  WSliderComponent: () => <WSliderComponent/>,
+  WSpeedDialComponent: () => <WSpeedDialComponent/>,
   WSwipeableViewComponent: () => <WSwipeableViewComponent/>,
   WSwitchComponent: () => <WSwitchComponent/>,
   WTableComponent: () => <WTableComponent/>,
   WTabContainerComponent: () => <WTabContainerComponent/>,
   WTextFieldComponent: () => <WTextFieldComponent/>,
   WTimePickerComponent: () => <WTimePickerComponent/>,
+  WToggleButtonComponent: () => <WToggleButtonComponent/>,
   WToolBarComponent: () => <WToolBarComponent/>,
   WTooltipComponent: () => <WTooltipComponent/>,
   WTypographyComponent: () => <WTypographyComponent/>,

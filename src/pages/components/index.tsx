@@ -60,15 +60,33 @@ const menuTree = [
       },
       {
         id: '3.2.2',
+        text: 'WButtonGroup',
+        path: 'w-button-group',
+        mdx: Mdx.WButtonGroupComponent
+      },
+      {
+        id: '3.2.3',
         text: 'WIconButton',
         path: 'w-icon-button',
         mdx: Mdx.WIconButtonComponent
       },
       {
-        id: '3.2.3',
+        id: '3.2.4',
         text: 'WLoadingButton',
         path: 'w-loading-button',
         mdx: Mdx.WLoadingButtonComponent
+      },
+      {
+        id: '3.2.5',
+        text: 'WSpeedDial',
+        path: 'w-speed-dial',
+        mdx: Mdx.WSpeedDialComponent
+      },
+      {
+        id: '3.2.6',
+        text: 'WToggleButton',
+        path: 'w-toggle-button',
+        mdx: Mdx.WToggleButtonComponent
       }
     ]
   },  
@@ -93,6 +111,18 @@ const menuTree = [
         text: 'WMessageDialog',
         path: 'w-message-dialog',
         mdx: Mdx.WMessageDialogComponent
+      },
+      {
+        id: '3.3.4',
+        text: 'WPopover',
+        path: 'w-popover',
+        mdx: Mdx.WPopoverComponent
+      },
+      {
+        id: '3.3.5',
+        text: 'WPopper',
+        path: 'w-popper',
+        mdx: Mdx.WPopperComponent
       }
     ]
   },
@@ -144,18 +174,24 @@ const menuTree = [
       },
       {
         id: '3.5.6',
+        text: 'WSlider',
+        path: 'w-slider',
+        mdx: Mdx.WSliderComponent
+      },
+      {
+        id: '3.5.7',
         text: 'WSwitch',
         path: 'w-switch',
         mdx: Mdx.WSwitchComponent
       },
       {
-        id: '3.5.7',
+        id: '3.5.8',
         text: 'WTextField',
         path: 'w-text-field',
         mdx: Mdx.WTextFieldComponent
       },
       {
-        id: '3.5.8',
+        id: '3.5.9',
         text: 'WTimePicker',
         path: 'w-time-picker',
         mdx: Mdx.WTimePickerComponent
@@ -180,52 +216,59 @@ const menuTree = [
       },
       {
         id: '3.6.3',
+        text: 'WContainer',
+        path: 'w-container',
+        mdx: Mdx.WContainerComponent
+      },
+      {
+        id: '3.6.4',
         text: 'WDivider',
         path: 'w-divider',
         mdx: Mdx.WDividerComponent
       },
       {
-        id: '3.6.4',
+        id: '3.6.5',
         text: 'WDrawer',
         path: 'w-drawer',
         mdx: Mdx.WDrawerComponent
       },
       {
-        id: '3.6.5',
+        id: '3.6.6',
         text: 'WExpansionPanel',
         path: 'w-expansion-panel',
         mdx: Mdx.WExpansionPanelComponent
       },
       {
-        id: '3.6.6',
+        id: '3.6.7',
         text: 'WGrid',
         path: 'w-grid',
         mdx: Mdx.WGridComponent
       },
       {
-        id: '3.6.7',
+        id: '3.6.8',
+        text: 'WNestedPageLayout',
+        path: 'w-nested-page-layout',
+        mdx: Mdx.WNestedPageLayoutComponent
+      },
+      {
+        id: '3.6.9',
         text: 'WPaper',
         path: 'w-paper',
         mdx: Mdx.WPaperComponent
       },
       {
-        id: '3.6.8',
+        id: '3.6.10',
         text: 'WSwipeableView',
         path: 'w-swipeable-view',
         mdx: Mdx.WSwipeableViewComponent
       },
       {
-        id: '3.6.9',
+        id: '3.6.11',
         text: 'WTabContainer',
         path: 'w-tab-container',
         mdx: Mdx.WTabContainerComponent
       },
-      {
-        id: '3.6.10',
-        text: 'WNestedPageLayout',
-        path: 'w-nested-page-layout',
-        mdx: Mdx.WNestedPageLayoutComponent
-      },
+      
     ]
   },
   {
@@ -258,9 +301,27 @@ const menuTree = [
       },
       {
         id: '3.8.2',
+        text: 'WBadge',
+        path: 'w-badge',
+        mdx: Mdx.WBadgeComponent
+      },
+      {
+        id: '3.8.3',
         text: 'WIcon',
         path: 'w-icon',
         mdx: Mdx.WIconComponent
+      },
+      {
+        id: '3.8.4',
+        text: 'WLink',
+        path: 'w-link',
+        mdx: Mdx.WLinkComponent
+      },
+      {
+        id: '3.8.5',
+        text: 'WRating',
+        path: 'w-rating',
+        mdx: Mdx.WRatingComponent
       },
     ]
   },
@@ -279,6 +340,12 @@ const menuTree = [
         text: 'WLinearProgress',
         path: 'w-linear-progress',
         mdx: Mdx.WLinearProgressComponent
+      },
+      {
+        id: '3.9.3',
+        text: 'WSkeleton',
+        path: 'w-skeleton',
+        mdx: Mdx.WSkeletonComponent
       }
     ]
   },
@@ -317,13 +384,19 @@ const menuTree = [
         mdx: Mdx.WChipComponent
       },    
       {
+        id: '3.99.2',
+        text: 'WClickAwayListerer',
+        path: 'w-click-away-listener',
+        mdx: Mdx.WClickAwayListenerComponent
+      },    
+      {
         id: '3.99.3',
         text: 'WTooltip',
         path: 'w-tooltip',
         mdx: Mdx.WTooltipComponent
       }, 
       {
-        id: '3.99.2',
+        id: '3.99.4',
         text: 'WTypography',
         path: 'w-typography',
         mdx: Mdx.WTypographyComponent

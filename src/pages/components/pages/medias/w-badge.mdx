@@ -1,0 +1,54 @@
+import LiveCode from '../../../../components/live-code'
+
+# WBadge
+
+WBadge @material-ui Badge'dan türetilmiştir.
+Badge'un propertylerine erişmek için [tıklayın](https://material-ui.com/api/badge/).
+
+### Ek Özellikler
+
+Eklenen ve değiştirilen özellikler aşağıdaki gibidir:
+
+| Adı                 | Veri Tipi                                                     | Default | Açıklama                                        |
+|:--------------------|:--------------------------------------------------------------|:--------|:------------------------------------------------|
+|                     |                                                               |         |                                                 |
+
+
+### Örnekler
+
+<LiveCode title="Temel Kullanım" code={`
+<div>
+  <div>
+    <WFace.WBadge style={{margin: 20}} badgeContent={4} color="primary">
+      <WFace.WIcon>mail</WFace.WIcon>
+    </WFace.WBadge>
+    <WFace.WBadge style={{margin: 20}} badgeContent={10} color="secondary">
+      <WFace.WIcon>mail</WFace.WIcon>
+    </WFace.WBadge>
+    <WFace.WIconButton aria-label="4 pending messages" style={{margin: 20}}>
+      <WFace.WBadge badgeContent={4} color="primary">
+        <WFace.WIcon>mail</WFace.WIcon>
+      </WFace.WBadge>
+    </WFace.WIconButton>
+  </div>
+  <WFace.WAppBar position="static" style={{margin: 20}}>
+    <WFace.WTabs value={0}>
+      <WFace.WTab
+        label={
+          <WFace.WBadge style={{padding: '0 8px'}} color="secondary" badgeContent={4}>
+            Item One
+          </WFace.WBadge>
+        }
+      />
+      <WFace.WTab label="Item Two" />
+      <WFace.WTab label="Item Three" />
+    </WFace.WTabs>
+  </WFace.WAppBar>
+  <WFace.WBadge color="primary" badgeContent={4} style={{margin: 20}}>
+    <WFace.WTypography style={{padding: '0 8px'}}>Typography</WFace.WTypography>
+  </WFace.WBadge>
+  <WFace.WBadge color="secondary" badgeContent={4} style={{margin: 20}}>
+    <WFace.WButton variant="contained">Button</WFace.WButton>
+  </WFace.WBadge>
+</div>
+`}/><br/>

@@ -1,0 +1,67 @@
+import LiveCode from '../../../../components/live-code'
+
+# WSlider
+
+WSlider @material-ui Slider'dan türetilmiştir.
+Slider'un propertylerine erişmek için [tıklayın](https://material-ui.com/api/slider/).
+
+### Ek Özellikler
+
+Eklenen ve değiştirilen özellikler aşağıdaki gibidir:
+
+| Adı                 | Veri Tipi                                                     | Default | Açıklama                                        |
+|:--------------------|:--------------------------------------------------------------|:--------|:------------------------------------------------|
+|                     |                                                               |         |                                                 |
+
+
+### Örnekler
+
+<LiveCode title="Temel Kullanım" code={`
+<div style={{padding: 50}}>
+  <WFace.WSlider
+    defaultValue={30}    
+    valueLabelDisplay="auto"
+    step={10}
+    marks
+    min={10}
+    max={110}
+  />
+  <WFace.WSlider
+    defaultValue={20}        
+    aria-labelledby="discrete-slider-custom"
+    step={10}
+    valueLabelDisplay="auto"
+    marks={[
+      {
+        value: 0,
+        label: '0°C',
+      },
+      {
+        value: 20,
+        label: '20°C',
+      },
+      {
+        value: 37,
+        label: '37°C',
+      },
+      {
+        value: 100,
+        label: '100°C',
+      },
+    ]}
+  />
+  <WFace.WSlider
+    style={{marginTop: 50}}
+    defaultValue={80}    
+    aria-labelledby="discrete-slider-always"
+    step={10}    
+    valueLabelDisplay="on"
+  />
+  <WFace.WSlider        
+    valueLabelDisplay="auto"
+    aria-labelledby="range-slider"    
+    value={[20, 37]}
+  />
+
+</div>
+`}/>
