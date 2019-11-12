@@ -62,6 +62,10 @@ module.exports = {
                 options: {
                     presets: ['@babel/react']
                 }
+            },
+            {
+              test: /\.json$/,
+              loader: 'json-loader'
             }
         ]
     },
