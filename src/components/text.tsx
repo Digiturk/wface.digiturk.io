@@ -11,7 +11,7 @@ export interface TextProps {
 
 class Text extends React.Component<TextProps, any> {
   render() {
-    return this.props[this.props.appContext.lang];    
+    return this.props[this.props.appContext.lang || "tr"];
   }
 }
 

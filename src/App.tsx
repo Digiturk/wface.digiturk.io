@@ -52,6 +52,9 @@ class AppInner extends React.Component<any, any> {
 
   public render() {
     const { classes } = this.props;
+    const lang = (this.props.appContext.lang || "tr").toUpperCase();
+
+
     return (
       <div className={classes.root}>
         <WFace.WAppBar id="app-bar" position="absolute" className={classes.appBar} elevation={0}>
@@ -78,7 +81,7 @@ class AppInner extends React.Component<any, any> {
                 onClick={(event) => this.setState({ userMenuAnchor: event.currentTarget })}
                 color="inherit"
               >
-                {this.props.appContext.lang.toUpperCase()}
+                {lang}
               </WFace.WButton>
               <WFace.WMenu
                 id="menu-appbar"
