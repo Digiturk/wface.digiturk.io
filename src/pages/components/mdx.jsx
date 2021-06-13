@@ -55,6 +55,7 @@ import WToggleButtonComponent from './pages/buttons/w-toggle-button.mdx'
 import WToolBarComponent from './pages/bars/w-tool-bar.mdx'
 import WTooltipComponent from './pages/others/w-tooltip.mdx'
 import WTypographyComponent from './pages/others/w-typography.mdx'
+import WWizardComponent from './pages/layouts/w-wizard.mdx'
 
 const Mdx = {
   ComponentList: () => <ComponentList/>,
@@ -110,6 +111,7 @@ const Mdx = {
   WToolBarComponent: () => <WToolBarComponent/>,
   WTooltipComponent: () => <WTooltipComponent/>,
   WTypographyComponent: () => <WTypographyComponent/>,
+  WWizardComponent: () => <WWizardComponent/>,
 }
 
 export default Mdx

@@ -268,7 +268,12 @@ const menuTree = [
         path: 'w-tab-container',
         mdx: Mdx.WTabContainerComponent
       },
-      
+      {
+        id: '3.6.12',
+        text: 'WWizard',
+        path: 'w-wizard',
+        mdx: Mdx.WWizardComponent
+      }
     ]
   },
   {
