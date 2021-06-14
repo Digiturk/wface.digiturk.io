@@ -209,14 +209,14 @@ class WizardExample extends React.Component {
         <WFace.WWizard
           onDataChanged={data => this.setState({ data })}
           steps={[
-            { label: "Altyapı Sorgula", component: this.Step1 },
-            { label: "Kişisel Bilgiler", component: this.Step2 },
-            { label: "Fatura Tercihi", component: this.StepX },
-            { label: "Ürün Tercihi", component: this.StepX },
-            { label: "Kampanya Tercihi", component: this.StepX },
-            { label: "Randevu", component: this.StepX },
-            { label: "Özet/Onay", component: this.Step7 },
-            { label: "Sonuç", component: this.StepX },
+            { label: "Adım 1", component: this.Step1 },
+            { label: "Adım 2", component: this.Step2 },
+            { label: "Adım 3", component: this.StepX },
+            { label: "Adım 4", component: this.StepX },
+            { label: "Adım 5", component: this.StepX },
+            { label: "Adım 6", component: this.StepX },
+            { label: "Adım 7", component: this.Step7 },
+            { label: "Adım 8", component: this.StepX },
           ]}
         />
       </WFace.WPaper>
